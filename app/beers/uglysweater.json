@@ -1,0 +1,12 @@
+{
+        "name": "Ugly Sweater",
+        "id": "uglysweater",
+        "brewery": "Parallel 49 Brewing",
+        "style": "Milk Stout",
+        "description": "A North American take on a classic English style of beer. This beer is brewed as a smooth tasting stout and sweetened using milk sugar (lactose). The sweetness plays an integral part in balancing the roasted malts that give the beer it's dark colour.",
+        "alchohol": 5,
+        "bitterness": 30,
+        "calories": "unknown",
+        "effervescence": "unknown",
+        "img": "beers/images/uglysweater.jpg"
+    }

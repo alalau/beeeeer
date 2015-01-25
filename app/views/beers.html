@@ -1,0 +1,86 @@
+
+<script src="scripts/horizontal-scrolling.js"></script>
+
+<script>
+	$(document).ready(function() {
+	    $('#stylePicker').mousewheel(function(e, delta) {
+	        this.scrollLeft -= (delta * 40);
+	        e.preventDefault();
+	    });
+	});
+</script>
+
+<header class="main">
+	<img src="images/icons/menu_white.svg" class="nav_icon">
+	<div class="navTitle">
+		<span>Beers</span>
+	</div>
+
+	<div class="searchbox">
+		<span class="searchicon"></span>
+		<input ng-model="query" class="unstyled">
+	</div>
+
+	<select ng-model="orderProp">
+		<option value="name">Alphabetical</option>
+		<option value="brewery">Brewery</option>
+		<option value="-alcohol">Highest Alcohol%</option>
+		<option value="alcohol">Lowest Alcohol%</option>
+		<option value="-bitterness">Most Bitter</option>
+		<option value="bitterness">Least Bitter</option>
+		<option value="calories">Calories</option>
+	</select>
+
+</header>
+
+<section id="stylePicker">
+    <div class="styleDiv">
+    	English Ale
+    </div>
+    <div class="styleDiv">
+    	American Ale
+    </div>
+    <div class="styleDiv">
+    	Pale Ale
+    </div>
+    <div class="styleDiv">
+    	Style Ale
+    </div>
+    <div class="styleDiv">
+    	Get how this works?
+    </div>
+    <div class="styleDiv">
+    	It's nifty
+    </div>
+    <div class="styleDiv">
+    	yeah...
+    </div>
+</section>
+
+<section id="beerResults">
+	<div class="container">
+		<div class="row" ng-repeat="beer in beers | filter:query | orderBy:orderProp">
+			<a href="#/beers/{{beer.id}}">
+				<div class="col-xs-4 col-sm-2">
+					<img src="beers/images/{{beer.id}}.png" class="beerListImg">
+				</div>
+				<div class="beerListInfo col-xs-8 col-sm-10 ">
+					<div class="beerTitle">
+						<h3>{{beer.name}}</h3>
+						<p>{{beer.brewery}}</p>
+					</div>
+					<div class="right">
+						<div class="beerData">
+							<h3>{{beer.alcohol}}%</h3>
+							<p>ABV<p>
+						</div>
+						<div class="beerData">
+							<h3>{{beer.bitterness}}</h3>
+							<p>IBU<p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</section>
