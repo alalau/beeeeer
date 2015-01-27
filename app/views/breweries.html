@@ -1,0 +1,69 @@
+<script>
+	$( window ).resize(function() {
+		var h = $(window).height();
+		var w = $(window).width();
+
+		var newH = h - 150;
+		if (w > 720) {
+			$('#vancouverMap').css({
+		        height: newH
+		    });
+		    $('.angular-google-map-container').css({
+		        height: newH + 30
+		    });
+		} else {
+			$('#vancouverMap').css({
+		        height: h
+		    });
+		    $('.angular-google-map-container').css({
+		        height: h
+		    });
+		}
+	});
+</script>
+
+<header class="main">
+	<img src="images/icons/menu_white.svg" class="nav_icon">
+	<div class="navTitleMobile">
+		<span>Beers</span>
+	</div>
+	<div class="navDesktop">
+		<a href="#/breweries" class="selected">Breweries</a>
+		<a href="#/beers">Beers</a>
+	</div>
+
+	<div class="searchbox">
+		<span class="searchicon"></span>
+		<input ng-model="query" class="unstyled">
+	</div>
+</header>
+
+<div id="vancouverMap" class="pushBelowHeader">
+	<div class="map-container">
+		<ui-gmap-google-map 
+			center='map.center' 
+			zoom='map.zoom'
+			options='map.options'
+		>
+		</ui-gmap-google-map>
+	</div>
+	<a class="fab-btn btn-next"></a>
+</div>
+
+<section id="beerResults" class="pushBelowHeader">
+	<div class="container">
+		Order: 
+		<select ng-model="orderProp">
+			<option value="name">Alphabetical</option>
+			<option value="-alcohol">Highest Alcohol%</option>
+			<option value="alcohol">Lowest Alcohol%</option>
+			<option value="-bitterness">Most Bitter</option>
+			<option value="bitterness">Least Bitter</option>
+		</select>
+		<div class="row" ng-repeat="brewery in breweries | filter:query | orderBy:orderProp">
+			<a href="#/breweries/{{brewery.id}}">
+				<h3>{{brewery.name}}</h3>
+			</a>
+		</div>
+	</div>
+</section>

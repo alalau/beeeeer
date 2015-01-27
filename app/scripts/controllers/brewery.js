@@ -8,7 +8,7 @@
  * Controller of the beerAppApp
  */
 angular.module('beerApp')
-  .controller('BeerDetailsController', ['$scope', '$routeParams', '$http',
+  .controller('BreweryDetailsController', ['$scope', '$routeParams', '$http',
   function($scope, $routeParams, $http) {
     $http.get('beers/beers.json').success(function(data) {
       	angular.forEach(data, function(item) {

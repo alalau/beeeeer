@@ -14,10 +14,19 @@ angular.module('beerApp', [
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'uiGmapgoogle-maps'
   ])
   .config(function ($routeProvider) {
     $routeProvider
+    .when('/breweries', {
+        templateUrl: 'views/breweries.html',
+        controller: 'BreweryListController'
+      })
+      .when('/breweries/:breweryId', {
+        templateUrl: 'views/brewery.html',
+        controller: 'BreweryDetailsController'
+      })
       .when('/beers', {
         templateUrl: 'views/beers.html',
         controller: 'BeerListController'
@@ -27,6 +36,6 @@ angular.module('beerApp', [
         controller: 'BeerDetailsController'
       })
       .otherwise({
-        redirectTo: '/beers'
+        redirectTo: '/breweries'
       });
   });
