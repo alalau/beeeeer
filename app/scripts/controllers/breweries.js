@@ -214,7 +214,7 @@ var styles = [
 
 angular.module('beerApp')
   .controller('BreweryListController', ['$scope', '$http', function($scope, $http) {
-		$http.get('beers/beers.json').success(function(data) {
+		$http.get('json/breweries.json').success(function(data) {
 			$scope.breweries = data;
 		});
  

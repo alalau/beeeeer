@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Steamworks Brew Pub",
+        "id": "steamworks",
+        "description": "In 1995, when Steamworks first took hold of their historic Gastown brewpub location, they discovered that the building had a rare steam heat system. A remnant from forward thinkers of a century past.\n\nThe brewmaster had only read of steam powered brewing, but had never seen a functional steam brewery. These are very rare indeed. They ventured forth, experimented, and created a one-of-a-kind steam generated brewery. The only one in Canada. To our pleasure, Steamworks found their test brews to be distinctively fresh and flavourful. For nearly 20 years, beer aficionados have been migrating to SteamWorks brewpub for a taste of these unconventional beers. \n\nSince 2013, with the advent of our Brewery in Burnaby Heights, you can now take the brewpub experience home with you.\n\nBottling, Kegging and Canning Tallboys, Steamworks is still brewing with the Power of Steam.",
+        "address": "The Landing, 375 Water Street, Vancouver, BC V6B 1B8",
+        "neighbourhood": "Down Town",
+        "beernumber": 13,
+        "hours": "11:30am - 12:00am",
+        "phone": "(604) 689-2739"
+    },
+    {
+        "name": "Patricia Hotel Brew Pub",
+        "id": "patriciahotel"
+    },
+    {
+        "name": "Storm Brewing",
+        "id": "storm"
+    },
+    {
+        "name": "Powell Street Brewing",
+        "id": "powellstreet"
+    },
+    {
+        "name": "Parallel 49 Brewing",
+        "id": "parallel49"
+    },
+    {
+        "name": "Bomber Brewing",
+        "id": "bomber"
+    },
+    {
+        "name": "Brassneck Brewery",
+        "id": "brassneck"
+    },
+    {
+        "name": "33 Acres",
+        "id": "33acres"
+    },
+    {
+        "name": "R&B Brewing",
+        "id": "rb"
+    },
+    {
+        "name": "Granville Island Brewing",
+        "id": "granvilleisland"
+    },
+    {
+        "name": "Dockside Brewing",
+        "id": "dockside"
+    },
+    {
+        "name": "Yaletown Brewing",
+        "id": "yaletown"
+    }
+]

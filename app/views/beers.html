@@ -43,9 +43,6 @@
 		</select>
 		<div class="row" ng-repeat="beer in beers | filter:query | orderBy:orderProp">
 			<a href="#/beers/{{beer.id}}">
-				<div class="col-xs-4 col-sm-2">
-					<img src="beers/images/{{beer.id}}.png" class="beerListImg">
-				</div>
 				<div class="beerListInfo col-xs-8 col-sm-10 ">
 					<div class="beerTitle">
 						<h3>{{beer.name}}</h3>
