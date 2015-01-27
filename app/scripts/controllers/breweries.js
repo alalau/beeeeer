@@ -226,7 +226,7 @@ angular.module('beerApp')
    				latitude: 49.2764031, 
    				longitude: -123.0979068 
    			}, 
-   			zoom: 13 ,
+   			zoom: 14 ,
    			options: {
 			   	scrollwheel: false,
 			    navigationControl: false,
