@@ -3,7 +3,7 @@
 		var h = $(window).height();
 		var w = $(window).width();
 
-		var newH = h - 150;
+		var newH = h - 100;
 		if (w > 720) {
 			$('#vancouverMap').css({
 		        height: newH
@@ -16,18 +16,18 @@
 		        height: h
 		    });
 		    $('.angular-google-map-container').css({
-		        height: h
+		        height: h + 30
 		    });
 		}
 	});
 </script>
 
 <header class="main">
-	<img src="images/icons/menu_white.svg" class="nav_icon">
-	<div class="navTitleMobile">
-		<span>Beers</span>
+	<img src="images/icons/menu_white.svg" class="nav_icon mobile">
+	<div class="navTitleMobile mobile">
+		<span>Breweries</span>
 	</div>
-	<div class="navDesktop">
+	<div class="navDesktop desktop">
 		<a href="#/breweries" class="selected">Breweries</a>
 		<a href="#/beers">Beers</a>
 	</div>
@@ -38,7 +38,7 @@
 	</div>
 </header>
 
-<div id="vancouverMap" class="pushBelowHeader">
+<div id="vancouverMap">
 	<div class="map-container">
 		<ui-gmap-google-map 
 			center='map.center' 

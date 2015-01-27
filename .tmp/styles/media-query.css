@@ -1,0 +1,49 @@
+
+/* =========================================================
+ * Media Query Styles
+ * ========================================================= */
+
+
+/* Tablets (portrait and landscape) ----------- */
+@media only screen 
+and (max-width : 720px) {
+
+	.mobile {
+		display: initial;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	header .searchbox {
+		background-color: rgba(255,255,255,0);
+		width: 50px;
+		right: 60px;
+	}
+
+	.filterBtn span {
+		display: none;
+	}
+
+	#vancouverMap .btn-next {
+		position: fixed;
+		right: 30px;
+		left: initial;
+		bottom: 30px;
+	}
+
+	#vancouverMap .btn-next:after {
+		background: url(../images/icons/list_black.svg) no-repeat 50% 50%;
+		background-size: 28px;
+		opacity: .5;
+	}
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (max-width : 480px) {
+
+}

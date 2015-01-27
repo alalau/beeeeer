@@ -1,3 +1,7 @@
+ /* =========================================================
+ * Scrollbars
+ * ========================================================= */
+
 #stylePicker::-webkit-scrollbar {
     height: 3px;
     padding: 20px;
@@ -11,6 +15,9 @@
     background: gray;
 }
 
+ /* =========================================================
+ * Baseline styles
+ * ========================================================= */
 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -32,24 +39,8 @@ ul {
 	padding: 0;
 }
 
-.nav_icon {
-	background-size: 24px;
-	display: inline-block;
-	height: 24px;
-	margin: 20px 24px;
-	width: 24px;
-	-webkit-user-drag: none;
-	opacity: 1;
-	display: none;
-}
-
-.beerListImg {
-	width: 100%;
-}
-
-.beerListInfo h3 {
-	margin-bottom: 10px;
-	font-size: 24px;
+button {
+	outline: none !important;
 }
 
 .clearfix {
@@ -61,27 +52,9 @@ ul {
     width: 100%;
 }
 
-#stylePicker {
-	margin-top: 60px;
-	padding: 60px;
-	background: #ececec;
-	border-bottom: 1px solid rgba(0,0,0,0.1);
-	margin-bottom: 60px;
-	width: 100%;
-	white-space: nowrap;
-	overflow-y: hidden;
-	overflow-x: scroll;
-	-webkit-overflow-scrolling: touch;
-	text-align: center;
-}
-
-.styleDiv {
-	display: inline-block;
-	width: 200px;
-	height: 200px;
-	background: white;
-	padding: 20px;
-}
+ /* =========================================================
+ * Header
+ * ========================================================= */
 
 header {
 	height: 64px;
@@ -182,10 +155,9 @@ header .searchbox {
 	left: 80px;
 	font-size: 24px;
 	margin: 15px 0;
-	display: none;
 }
 
-.navDesktop a {
+.navDesktop a, .filterBtn span {
 	color: #fff;
 	font-size: 16px;
 	padding: 22px;
@@ -203,6 +175,62 @@ header .searchbox {
 	opacity: 1;
 	border-bottom: 2px solid white;
 }
+
+.filterBtn {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: none;
+	border: 0;
+	padding: 0;
+}
+
+
+.nav_icon {
+	background-size: 24px;
+	display: inline-block;
+	height: 24px;
+	margin: 20px 24px;
+	width: 24px;
+	-webkit-user-drag: none;
+	opacity: 1;
+	float: left;
+}
+
+.filterBtn span {
+	padding-left: 0;
+	padding-right: 30px;
+}
+
+ /* =========================================================
+ * Filter
+ * ========================================================= */
+
+#stylePicker {
+	margin-top: 60px;
+	padding: 60px;
+	background: #ececec;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	margin-bottom: 60px;
+	width: 100%;
+	white-space: nowrap;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	-webkit-overflow-scrolling: touch;
+	text-align: center;
+}
+
+.styleDiv {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	background: white;
+	padding: 20px;
+}
+
+ /* =========================================================
+ * Beers Results
+ * ========================================================= */
 
 #beerResults .container {
 	max-width: 650px;
@@ -238,8 +266,22 @@ header .searchbox {
 		margin-bottom: 20px;
 	}
 
+.beerListImg {
+	width: 100%;
+}
+
+.beerListInfo h3 {
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+
+
+ /* =========================================================
+ * Brewery Map
+ * ========================================================= */
+
 #vancouverMap {
-	height: 600px;
+	height: 650px;
 	background: #B0B0B0;
 	position: relative;
 }
@@ -286,9 +328,9 @@ header .searchbox {
 	bottom: -28px;
 }
 
-.btn-next:after {
+#vancouverMap .btn-next:after {
 	background: url(../images/icons/next.png) no-repeat 50% 50%;
-	background-size: 100%;
+	background-size: 16px;
 	opacity: .5;
 }
 
@@ -306,5 +348,9 @@ header .searchbox {
 }
 
 .angular-google-map-container { 
-	height: 630px;
+	height: 680px;
+}
+
+.mobile {
+	display: none;
 }
