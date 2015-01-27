@@ -34,9 +34,13 @@ and (max-width : 720px) {
 	}
 
 	#vancouverMap .btn-next:after {
-		background: url(../images/icons/list_black.svg) no-repeat 50% 50%;
-		background-size: 28px;
-		opacity: .5;
+		background-position: center;
+		-webkit-background-position: center;
+	}
+
+	#vancouverMap .btn-next.mapIcon:after {
+		background-position: bottom;
+		-webkit-background-position: bottom;
 	}
 }
 

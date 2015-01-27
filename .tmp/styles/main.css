@@ -329,8 +329,10 @@ header .searchbox {
 }
 
 #vancouverMap .btn-next:after {
-	background: url(../images/icons/next.png) no-repeat 50% 50%;
-	background-size: 16px;
+	background: url(../images/icons/fab-icons_black.svg) no-repeat;
+	background-size: 56px;
+	background-position: top;
+	-webkit-background-position: top;
 	opacity: .5;
 }
 

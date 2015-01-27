@@ -20,6 +20,44 @@
 		    });
 		}
 	});
+	
+	$(window).scroll(function(){
+        var w = $(window).width();
+        beerTop = $("#beerResults").offset().top - $(window).scrollTop();
+        if (w < 720) {
+        	if (beerTop < ($(window).height() / 2)) {
+        		$('#fab').addClass('mapIcon');
+        	} else {
+        		$('#fab').removeClass('mapIcon');
+        	}
+        } else {
+        	$('#fab').removeClass('mapIcon');
+        }
+   });
+
+
+	$('#fab').click(function() {
+		var w = $(window).width();
+		beerTop = $("#beerResults").offset().top - $(window).scrollTop();
+		if (w < 720) {	
+			if (beerTop < ($(window).height() / 2)) {
+				$('html, body').animate({
+			        scrollTop: 0
+			    }, 500);
+			} else {
+				$('html, body').animate({
+		        	scrollTop: $('#beerResults').offset().top - 64
+		    	}, 500);
+			}
+		} else {
+			$('html, body').animate({
+		        scrollTop: $('#beerResults').offset().top - 64
+		    }, 500);
+		}
+	    return false;
+	});
+
+
 </script>
 
 <header class="main">
@@ -52,7 +90,7 @@
 		>
 		</ui-gmap-google-map>
 	</div>
-	<a class="fab-btn btn-next"></a>
+	<a id="fab" class="fab-btn btn-next"></a>
 </div>
 
 <section id="beerResults" class="pushBelowHeader">
