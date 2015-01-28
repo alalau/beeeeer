@@ -35,7 +35,6 @@
         }
    });
 
-
 	$('#fab').click(function() {
 		var w = $(window).width();
 		beerTop = $("#beerResults").offset().top - $(window).scrollTop();
@@ -57,7 +56,11 @@
 	    return false;
 	});
 
-
+	$('#filterBtn').click(function() {
+		$('#filter-panel').toggleClass("open");
+		$('#vancouverMap').toggleClass("makeSpaceForFilter");
+		$('#beerResults').toggleClass("makeSpaceForFilter");
+	});
 </script>
 
 <header class="main">
@@ -75,11 +78,15 @@
 		<input ng-model="query" class="unstyled">
 	</div>
 
-	<button class="filterBtn">
+	<button class="filterBtn" id="filterBtn">
 		<img src="images/icons/filter_white.svg" class="nav_icon">
 		<span>Filter</span>
 	</button>
 </header>
+
+<div id="filter-panel">
+	filter options
+</div>
 
 <div id="vancouverMap">
 	<div class="map-container">
@@ -95,14 +102,14 @@
 
 <section id="beerResults" class="pushBelowHeader">
 	<div class="container">
-		Order: 
-		<select ng-model="orderProp">
-			<option value="name">Alphabetical</option>
-			<option value="-alcohol">Highest Alcohol%</option>
-			<option value="alcohol">Lowest Alcohol%</option>
-			<option value="-bitterness">Most Bitter</option>
-			<option value="bitterness">Least Bitter</option>
-		</select>
+		<p>Order: 
+			<select ng-model="orderProp">
+				<option value="name">Alphabetical</option>
+				<option value="">Most Beers</option>
+				<option value="">Least Beers</option>
+			</select>
+		</p>
+		<span class="line"></span>
 		<div class="row" ng-repeat="brewery in breweries | filter:query | orderBy:orderProp">
 			<a href="#/breweries/{{brewery.id}}">
 				<h3>{{brewery.name}}</h3>
