@@ -2,13 +2,14 @@
 // Swipe menu out function. NOTE this is hidden with css for desktop view port sizes.
 // ----------------------------------------------------------------------------------
 
-$(function() {
-	// var h = $(window).height(); //May require later.
+// var h = $(window).height(); //May require later.
 	var w = $(window).width();
     var pad = document.getElementById("swipe-area");
     var menu = document.getElementById("menu");
-    var menuhidden = true;
+	var menu = document.getElementById("menu");
+	var menuhidden = true;
 
+$(function() {
     if ( w <= 480 ) {
 	    Hammer(pad).on("swipeleft", function() {
 	    	if ( menuhidden == false ) {
@@ -30,4 +31,4 @@ $(function() {
 	    	}
 	    });
 	}
-})
+});

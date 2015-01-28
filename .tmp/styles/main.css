@@ -192,6 +192,15 @@ header .searchbox {
 	padding: 0;
 }
 
+.menuBtn {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: none;
+	border: 0;
+	padding: 0;
+}
+
 
 .nav_icon {
 	background-size: 24px;
