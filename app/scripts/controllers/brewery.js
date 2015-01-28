@@ -16,4 +16,8 @@ angular.module('beerApp')
             $scope.brewery = item;
         });
     });
+
+    $http.get('json/beers.json').success(function(data) {
+        $scope.beers = data;
+    });
 }]);

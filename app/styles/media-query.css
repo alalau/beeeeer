@@ -59,6 +59,10 @@ and (max-width : 720px) {
 	#filter-panel.open {
 		top: 0;
 	}
+
+	.beerData {
+		width: 60px;
+	}
 }
 
 

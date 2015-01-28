@@ -23,7 +23,7 @@
 	
 	$(window).scroll(function(){
         var w = $(window).width();
-        beerTop = $("#beerResults").offset().top - $(window).scrollTop();
+        beerTop = $("#brewerResults").offset().top - $(window).scrollTop();
         if (w < 720) {
         	if (beerTop < ($(window).height() / 2)) {
         		$('#fab').addClass('mapIcon');
@@ -37,7 +37,7 @@
 
 	$('#fab').click(function() {
 		var w = $(window).width();
-		beerTop = $("#beerResults").offset().top - $(window).scrollTop();
+		beerTop = $("#brewerResults").offset().top - $(window).scrollTop();
 		if (w < 720) {	
 			if (beerTop < ($(window).height() / 2)) {
 				$('html, body').animate({
@@ -45,12 +45,12 @@
 			    }, 500);
 			} else {
 				$('html, body').animate({
-		        	scrollTop: $('#beerResults').offset().top - 64
+		        	scrollTop: $('#brewerResults').offset().top - 64
 		    	}, 500);
 			}
 		} else {
 			$('html, body').animate({
-		        scrollTop: $('#beerResults').offset().top - 64
+		        scrollTop: $('#brewerResults').offset().top - 64
 		    }, 500);
 		}
 	    return false;
@@ -59,7 +59,13 @@
 	$('#filterBtn').click(function() {
 		$('#filter-panel').toggleClass("open");
 		$('#vancouverMap').toggleClass("makeSpaceForFilter");
-		$('#beerResults').toggleClass("makeSpaceForFilter");
+		$('#brewerResults').toggleClass("makeSpaceForFilter");
+	});
+
+	$('#search').bind('input', function() { 
+	 	$('html, body').animate({
+        	scrollTop: $('#brewerResults').offset().top - 64
+    	}, 500);
 	});
 </script>
 
@@ -75,7 +81,7 @@
 
 	<div class="searchbox">
 		<span class="searchicon"></span>
-		<input ng-model="query" class="unstyled">
+		<input ng-model="query" class="unstyled" id="search">
 	</div>
 
 	<button class="filterBtn" id="filterBtn">
@@ -85,7 +91,7 @@
 </header>
 
 <div id="filter-panel">
-	filter options
+	filter options... coming soon.
 </div>
 
 <div id="vancouverMap">
@@ -98,9 +104,10 @@
 		</ui-gmap-google-map>
 	</div>
 	<a id="fab" class="fab-btn btn-next"></a>
+	<p class="temporary-text">Brewery Pins Coming Soon!</p>
 </div>
 
-<section id="beerResults" class="pushBelowHeader">
+<section id="brewerResults" class="pushBelowHeader">
 	<div class="container">
 		<p>Order: 
 			<select ng-model="orderProp">
@@ -112,7 +119,10 @@
 		<span class="line"></span>
 		<div class="row" ng-repeat="brewery in breweries | filter:query | orderBy:orderProp">
 			<a href="#/breweries/{{brewery.id}}">
-				<h3>{{brewery.name}}</h3>
+				<div class="beerListInfo col-xs-12">
+					<h3>{{brewery.name}}</h3>
+					<p>{{brewery.address}}</p>
+				</div>
 			</a>
 		</div>
 	</div>

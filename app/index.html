@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Beer App</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src='http://maps.googleapis.com/maps/api/js?sensor=false'></script>
@@ -27,7 +27,7 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
-    <div ng-view=""></div>
+    <div ng-view="" autoscroll="true"></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <!--

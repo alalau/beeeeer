@@ -40,7 +40,7 @@
 </header>
 
 <div id="filter-panel">
-
+	filter options... coming soon.
 </div>
 
 <section id="beerResults" class="pushBelowHeader">
@@ -57,7 +57,7 @@
 		<span class="line"></span>
 		<div class="row" ng-repeat="beer in beers | filter:query | orderBy:orderProp">
 			<a href="#/beers/{{beer.id}}">
-				<div class="beerListInfo col-xs-8 col-sm-10 ">
+				<div class="beerListInfo col-xs-12">
 					<div class="beerTitle">
 						<h3>{{beer.name}}</h3>
 						<p>{{beer.brewery}}</p>
