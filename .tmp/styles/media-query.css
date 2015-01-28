@@ -13,6 +13,10 @@ and (min-width : 720px) {
 /* Tablets (portrait and landscape) ----------- */
 @media only screen 
 and (max-width : 720px) {
+	#menu, #menu a {
+		visibility: visible;
+		display: inline-block;
+	}
 
 	.mobile {
 		display: initial;
@@ -70,5 +74,8 @@ and (max-width : 720px) {
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
 and (max-width : 480px) {
-
+	#menu, #menu a {
+		visibility: visible;
+		display: inline-block;
+	}
 }
