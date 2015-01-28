@@ -2,6 +2,14 @@
 <script src="scripts/horizontal-scrolling.js"></script>
 
 <script>
+	$('#filterBtn2').click(function() {
+		$('#filter-panel').toggleClass("open");
+		$('#vancouverMap').toggleClass("makeSpaceForFilter");
+		$('#beerResults').toggleClass("makeSpaceForFilter");
+	});
+</script>
+
+<script>
 	$(document).ready(function() {
 	    $('#stylePicker').mousewheel(function(e, delta) {
 	        this.scrollLeft -= (delta * 40);
@@ -25,27 +33,30 @@
 		<input ng-model="query" class="unstyled">
 	</div>
 
-	<button class="filterBtn">
+	<button class="filterBtn" id="filterBtn2">
 		<img src="images/icons/filter_white.svg" class="nav_icon">
 		<span>Filter</span>
 	</button>
 </header>
 
+<div id="filter-panel">
+
+</div>
+
 <section id="beerResults" class="pushBelowHeader">
 	<div class="container">
-		Order: 
-		<select ng-model="orderProp">
-			<option value="name">Alphabetical</option>
-			<option value="-alcohol">Highest Alcohol%</option>
-			<option value="alcohol">Lowest Alcohol%</option>
-			<option value="-bitterness">Most Bitter</option>
-			<option value="bitterness">Least Bitter</option>
-		</select>
+		<p> Order: 
+			<select ng-model="orderProp">
+				<option value="name">Alphabetical</option>
+				<option value="-alcohol">Highest Alcohol%</option>
+				<option value="alcohol">Lowest Alcohol%</option>
+				<option value="-bitterness">Most Bitter</option>
+				<option value="bitterness">Least Bitter</option>
+			</select>
+		</p>
+		<span class="line"></span>
 		<div class="row" ng-repeat="beer in beers | filter:query | orderBy:orderProp">
 			<a href="#/beers/{{beer.id}}">
-				<div class="col-xs-4 col-sm-2">
-					<img src="beers/images/{{beer.id}}.png" class="beerListImg">
-				</div>
 				<div class="beerListInfo col-xs-8 col-sm-10 ">
 					<div class="beerTitle">
 						<h3>{{beer.name}}</h3>

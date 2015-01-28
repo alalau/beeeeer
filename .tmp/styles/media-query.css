@@ -3,6 +3,12 @@
  * Media Query Styles
  * ========================================================= */
 
+@media only screen 
+and (min-width : 720px) {
+	.makeSpaceForFilter {
+		width: calc(100% - 300px) !important;
+	}
+}
 
 /* Tablets (portrait and landscape) ----------- */
 @media only screen 
@@ -34,9 +40,24 @@ and (max-width : 720px) {
 	}
 
 	#vancouverMap .btn-next:after {
-		background: url(../images/icons/list_black.svg) no-repeat 50% 50%;
-		background-size: 28px;
-		opacity: .5;
+		background-position: center;
+		-webkit-background-position: center;
+	}
+
+	#vancouverMap .btn-next.mapIcon:after {
+		background-position: bottom;
+		-webkit-background-position: bottom;
+	}
+
+	#filter-panel {
+		width: 100%;
+		height: 500px;
+		margin-right: 0;
+		top: -500px
+	}
+
+	#filter-panel.open {
+		top: 0;
 	}
 }
 
