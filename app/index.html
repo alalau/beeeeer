@@ -4,30 +4,35 @@
     <meta charset="utf-8">
     <title>Beer App</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src='http://maps.googleapis.com/maps/api/js?sensor=false'></script>
 
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/menu.css">
     <link rel="stylesheet" href="styles/media-query.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
   </head>
   <body ng-app="beerApp">
-
-<script>
-function initialize() {
-  var mapProp = {
-    center:new google.maps.LatLng(51.508742,-0.120850),
-    zoom:5,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-
-    <div ng-view=""></div>
+      <script>
+        function initialize() {
+          var mapProp = {
+            center:new google.maps.LatLng(51.508742,-0.120850),
+            zoom:5,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+          };
+          var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+      </script>
+      <div id="swipe-area">
+        <div ng-view=""></div>
+        <div id="menu">
+          <a href="#/breweries" class="selected">Breweries</a>
+          <a href="#/beers">Beers</a>
+      </div>
+      </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <!--
@@ -61,6 +66,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <script src="bower_components/angular-ui-sortable/sortable.js"></script>
+    <script src="bower_components/hammer.js/hammer.js"></script>
+    <script src="scripts/menu.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
