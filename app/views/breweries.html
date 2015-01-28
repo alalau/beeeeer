@@ -23,7 +23,11 @@
 	
 	$(window).scroll(function(){
         var w = $(window).width();
+<<<<<<< HEAD
         beerTop = $("#brewerResults").offset().top - $(window).scrollTop();
+=======
+        beerTop = $("#beerResults").offset().top - $(window).scrollTop();
+>>>>>>> refs/heads/gh-pages
         if (w < 720) {
         	if (beerTop < ($(window).height() / 2)) {
         		$('#fab').addClass('mapIcon');
@@ -37,7 +41,11 @@
 
 	$('#fab').click(function() {
 		var w = $(window).width();
+<<<<<<< HEAD
 		beerTop = $("#brewerResults").offset().top - $(window).scrollTop();
+=======
+		beerTop = $("#beerResults").offset().top - $(window).scrollTop();
+>>>>>>> refs/heads/gh-pages
 		if (w < 720) {	
 			if (beerTop < ($(window).height() / 2)) {
 				$('html, body').animate({
@@ -45,12 +53,20 @@
 			    }, 500);
 			} else {
 				$('html, body').animate({
+<<<<<<< HEAD
 		        	scrollTop: $('#brewerResults').offset().top - 64
+=======
+		        	scrollTop: $('#beerResults').offset().top - 64
+>>>>>>> refs/heads/gh-pages
 		    	}, 500);
 			}
 		} else {
 			$('html, body').animate({
+<<<<<<< HEAD
 		        scrollTop: $('#brewerResults').offset().top - 64
+=======
+		        scrollTop: $('#beerResults').offset().top - 64
+>>>>>>> refs/heads/gh-pages
 		    }, 500);
 		}
 	    return false;
@@ -59,6 +75,7 @@
 	$('#filterBtn').click(function() {
 		$('#filter-panel').toggleClass("open");
 		$('#vancouverMap').toggleClass("makeSpaceForFilter");
+<<<<<<< HEAD
 		$('#brewerResults').toggleClass("makeSpaceForFilter");
 	});
 
@@ -66,6 +83,9 @@
 	 	$('html, body').animate({
         	scrollTop: $('#brewerResults').offset().top - 64
     	}, 500);
+=======
+		$('#beerResults').toggleClass("makeSpaceForFilter");
+>>>>>>> refs/heads/gh-pages
 	});
 	$('#menuBtn').click(function() {
 		if ( menuhidden == false ) {
@@ -92,7 +112,11 @@
 
 	<div class="searchbox">
 		<span class="searchicon"></span>
+<<<<<<< HEAD
 		<input ng-model="query" class="unstyled" id="search">
+=======
+		<input ng-model="query" class="unstyled">
+>>>>>>> refs/heads/gh-pages
 	</div>
 
 	<button class="filterBtn" id="filterBtn">
@@ -102,7 +126,11 @@
 </header>
 
 <div id="filter-panel">
+<<<<<<< HEAD
 	filter options... coming soon.
+=======
+	filter options
+>>>>>>> refs/heads/gh-pages
 </div>
 
 <div id="vancouverMap">
@@ -115,10 +143,16 @@
 		</ui-gmap-google-map>
 	</div>
 	<a id="fab" class="fab-btn btn-next"></a>
+<<<<<<< HEAD
 	<p class="temporary-text">Brewery Pins Coming Soon!</p>
 </div>
 
 <section id="brewerResults" class="pushBelowHeader">
+=======
+</div>
+
+<section id="beerResults" class="pushBelowHeader">
+>>>>>>> refs/heads/gh-pages
 	<div class="container">
 		<p>Order: 
 			<select ng-model="orderProp">
@@ -130,10 +164,14 @@
 		<span class="line"></span>
 		<div class="row" ng-repeat="brewery in breweries | filter:query | orderBy:orderProp">
 			<a href="#/breweries/{{brewery.id}}">
+<<<<<<< HEAD
 				<div class="beerListInfo col-xs-12">
 					<h3>{{brewery.name}}</h3>
 					<p>{{brewery.address}}</p>
 				</div>
+=======
+				<h3>{{brewery.name}}</h3>
+>>>>>>> refs/heads/gh-pages
 			</a>
 		</div>
 	</div>

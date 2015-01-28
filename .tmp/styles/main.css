@@ -1,9 +1,14 @@
+<<<<<<< HEAD
  /* =========================================================
  * Scrollbars
  * ========================================================= */
 
 #stylePicker::-webkit-scrollbar {
     height: 3px;
+=======
+#stylePicker::-webkit-scrollbar {
+    height: 8px;
+>>>>>>> refs/heads/gh-pages
     padding: 20px;
 }
 
@@ -12,19 +17,29 @@
 
 #stylePicker::-webkit-scrollbar-thumb {
     border-radius: 0;
+<<<<<<< HEAD
     background: gray;
 }
 
  /* =========================================================
  * Baseline styles
  * ========================================================= */
+=======
+    background: #FFA726;
+}
+
+>>>>>>> refs/heads/gh-pages
 
 body {
 	font-family: 'Open Sans', sans-serif;
 	background: #fafafa;
 }
 
+<<<<<<< HEAD
 h1, h2 {
+=======
+h1, h2, h3 {
+>>>>>>> refs/heads/gh-pages
 	margin: 0;
 	padding: 0;
 }
@@ -39,6 +54,7 @@ ul {
 	padding: 0;
 }
 
+<<<<<<< HEAD
 button {
 	outline: none !important;
 }
@@ -59,6 +75,12 @@ button {
 header {
 	height: 64px;
 	background-color: gray;
+=======
+
+header {
+	height: 64px;
+	background-color: #F57C00;
+>>>>>>> refs/heads/gh-pages
 	color: #fff;
 	position: relative;
 	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
@@ -68,17 +90,29 @@ header {
 	top: 0;
 }
 
+<<<<<<< HEAD
 select {
 	display: inline-block;
 	outline: 0 !important;
 	background: transparent;
 	margin: 0 20px;
+=======
+header select {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: inline-block;
+	outline: 0 !important;
+	background: transparent;
+	margin: 20px;
+>>>>>>> refs/heads/gh-pages
 	font-size: 16px;
 	border-radius: 0;
 	-webkit-border-radius: 0;
 	border: 0;
 }
 
+<<<<<<< HEAD
 p {
 	font-size: 16px;
 }
@@ -89,6 +123,55 @@ span.line {
 	background: rgba(0,0,0,0.5);
 	display: block;
 	margin: 30px 0;
+=======
+.nav_icon {
+	background-size: 24px;
+	display: inline-block;
+	height: 24px;
+	margin: 20px 24px;
+	width: 24px;
+	-webkit-user-drag: none;
+	opacity: 1;
+}
+
+.beerListImg {
+	width: 100%;
+}
+
+.beerListInfo h3 {
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+
+.clearfix {
+    display: inline-block;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    height: 1px;
+    width: 100%;
+}
+
+#stylePicker {
+	margin-top: 60px;
+	padding: 60px;
+	background: #ececec;
+	border-bottom: 1px solid #DDDDDD;
+	margin-bottom: 60px;
+	width: 100%;
+	white-space: nowrap;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+.styleDiv {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	background: white;
+	padding: 20px;
+>>>>>>> refs/heads/gh-pages
 }
 
 header .searchbox {
@@ -153,6 +236,7 @@ header .searchbox {
 				background: rgba(0,0,0,0);
 			}
 
+<<<<<<< HEAD
 .pushBelowHeader {
 	margin-top: 64px;
 }
@@ -255,6 +339,20 @@ header .searchbox {
 #brewerResults .row {
 	padding: 20px 0;
 }
+=======
+.navTitle {
+	position: absolute;
+	top: 0;
+	left: 80px;
+	font-size: 24px;
+	margin: 15px 0;
+}
+
+#beerResults .container {
+	max-width: 650px;
+}
+
+>>>>>>> refs/heads/gh-pages
 
 .beerTitle {
 	display: inline-block;
@@ -277,6 +375,7 @@ header .searchbox {
 	float: right;
 }
 
+<<<<<<< HEAD
 #beerResults {
 	padding-top: 60px;
 	width: 100%;
@@ -476,4 +575,8 @@ p.temporary-text {
 	text-align: center;
 	width: 100%;
 	opacity: 0.5;
+=======
+#beerResults .row {
+	margin-bottom: 20px;
+>>>>>>> refs/heads/gh-pages
 }
