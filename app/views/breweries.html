@@ -1,0 +1,130 @@
+<script>
+	$( window ).resize(function() {
+		var h = $(window).height();
+		var w = $(window).width();
+
+		var newH = h - 100;
+		if (w > 720) {
+			$('#vancouverMap').css({
+		        height: newH
+		    });
+		    $('.angular-google-map-container').css({
+		        height: newH + 30
+		    });
+		} else {
+			$('#vancouverMap').css({
+		        height: h
+		    });
+		    $('.angular-google-map-container').css({
+		        height: h + 30
+		    });
+		}
+	});
+	
+	$(window).scroll(function(){
+        var w = $(window).width();
+        beerTop = $("#beerResults").offset().top - $(window).scrollTop();
+        if (w < 720) {
+        	if (beerTop < ($(window).height() / 2)) {
+        		$('#fab').addClass('mapIcon');
+        	} else {
+        		$('#fab').removeClass('mapIcon');
+        	}
+        } else {
+        	$('#fab').removeClass('mapIcon');
+        }
+   });
+
+	$('#fab').click(function() {
+		var w = $(window).width();
+		beerTop = $("#beerResults").offset().top - $(window).scrollTop();
+		if (w < 720) {	
+			if (beerTop < ($(window).height() / 2)) {
+				$('html, body').animate({
+			        scrollTop: 0
+			    }, 500);
+			} else {
+				$('html, body').animate({
+		        	scrollTop: $('#beerResults').offset().top - 64
+		    	}, 500);
+			}
+		} else {
+			$('html, body').animate({
+		        scrollTop: $('#beerResults').offset().top - 64
+		    }, 500);
+		}
+	    return false;
+	});
+
+	$('#filterBtn').click(function() {
+		$('#filter-panel').toggleClass("open");
+		$('#vancouverMap').toggleClass("makeSpaceForFilter");
+		$('#beerResults').toggleClass("makeSpaceForFilter");
+	});
+	$('#menuBtn').click(function() {
+		if ( menuhidden == false ) {
+			$( menu ).animate({left: "-=250"}, 250);
+			menuhidden = true;
+		} else if ( menuhidden == true ) {
+			$( menu ).animate({left: "+=250"}, 250);
+			menuhidden = false;
+		}
+	});
+</script>
+
+<header class="main">
+	<button class="menuBtn" id="menuBtn">
+		<img src="images/icons/menu_white.svg" class="nav_icon mobile">
+	</button>
+	<div class="navTitleMobile mobile">
+		<span>Breweries</span>
+	</div>
+	<div class="navDesktop desktop">
+		<a href="#/breweries" class="selected">Breweries</a>
+		<a href="#/beers">Beers</a>
+	</div>
+
+	<div class="searchbox">
+		<span class="searchicon"></span>
+		<input ng-model="query" class="unstyled">
+	</div>
+
+	<button class="filterBtn" id="filterBtn">
+		<img src="images/icons/filter_white.svg" class="nav_icon">
+		<span>Filter</span>
+	</button>
+</header>
+
+<div id="filter-panel">
+	filter options
+</div>
+
+<div id="vancouverMap">
+	<div class="map-container">
+		<ui-gmap-google-map 
+			center='map.center' 
+			zoom='map.zoom'
+			options='map.options'
+		>
+		</ui-gmap-google-map>
+	</div>
+	<a id="fab" class="fab-btn btn-next"></a>
+</div>
+
+<section id="beerResults" class="pushBelowHeader">
+	<div class="container">
+		<p>Order: 
+			<select ng-model="orderProp">
+				<option value="name">Alphabetical</option>
+				<option value="">Most Beers</option>
+				<option value="">Least Beers</option>
+			</select>
+		</p>
+		<span class="line"></span>
+		<div class="row" ng-repeat="brewery in breweries | filter:query | orderBy:orderProp">
+			<a href="#/breweries/{{brewery.id}}">
+				<h3>{{brewery.name}}</h3>
+			</a>
+		</div>
+	</div>
+</section>
