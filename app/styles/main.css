@@ -330,7 +330,7 @@ header .searchbox {
 }
 
 #fab {
-	z-index: 9999999999;
+	z-index: 900;
 }
 
 .fab-btn:before, .fab-btn:after {
