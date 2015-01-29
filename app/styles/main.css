@@ -329,6 +329,10 @@ header .searchbox {
 	transition: 		width .28s cubic-bezier(.4,0,.2,1);
 }
 
+#fab {
+	z-index: 9999999999;
+}
+
 .fab-btn:before, .fab-btn:after {
 	background: no-repeat 50% 50%;
 	-moz-border-radius: 50%;
