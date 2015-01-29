@@ -271,5 +271,30 @@ angular.module('beerApp')
  
         $scope.orderProp = 'name';
 
+        $scope.pageClass = 'page-home';
+
+        /* Resize Map */
+
+        $scope.init = function () {
+            var h = $(window).height();
+            var w = $(window).width();
+            var newH = h - ($(window).width() / 8);
+            if (w > 720) {
+                $('#vancouverMap').css({
+                    height: newH
+                });
+                $('.angular-google-map-container').css({
+                    height: newH + 30
+                });
+            } else {
+                $('#vancouverMap').css({
+                    height: h - 56
+                });
+                $('.angular-google-map-container').css({
+                    height: h - 30
+                });
+            }
+        };
+
 }]);
   

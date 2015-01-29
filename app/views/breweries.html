@@ -4,7 +4,7 @@
 		var h = $(window).height();
 		var w = $(window).width();
 
-		var newH = h - 100;
+		var newH = h - ($(window).width() / 8);
 		if (w > 720) {
 			$('#vancouverMap').css({
 		        height: newH
@@ -14,10 +14,10 @@
 		    });
 		} else {
 			$('#vancouverMap').css({
-		        height: h
+		        height: h - 56
 		    });
 		    $('.angular-google-map-container').css({
-		        height: h + 30
+		        height: h - 30
 		    });
 		}
 	});
@@ -43,7 +43,7 @@
 
         if ($('#detailContent').length){
 	        contentTop = $("#detailContent").offset().top - scrollTop;
-	    	if (contentTop < 80) {
+	    	if (contentTop < 105) {
 	    		$('header').removeClass('detail-view');
 	    	} else {
 	    		$('header').addClass('detail-view');
@@ -97,7 +97,7 @@
 	});
 </script>
 
-<div ng-controller="BreweryListController" ng-app="breweryListApp">
+<div ng-controller="BreweryListController" data-ng-init="init()">
 	<header class="main">
 		<button class="menuBtn" id="menuBtn">
 			<img src="images/icons/menu_white.svg" class="nav_icon mobile">

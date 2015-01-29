@@ -1,13 +1,13 @@
 
 <script>
-	
+	/*
 	$(window).scroll(function(){
 
 		var scrollTop = $(window).scrollTop();
 
         var w = $(window).width();
         contentTop = $("#detailContent").offset().top - scrollTop;
-    	if (contentTop < 80) {
+    	if (contentTop < 110) {
     		$('header').removeClass('detail-view');
     	} else {
     		$('header').addClass('detail-view');
@@ -21,55 +21,59 @@
             opacity: newOpacity
         });   		
    });
+*/
 
 </script>
 
-<header class="detail-view">
-	<a href="./#/breweries">
-		<img src="images/icons/back_white.svg" class="nav_icon">
-	</a>
-	<div class="navTitleMobile">
-		<span>{{brewery.name}}</span>
-	</div>
-	<div class="heroImage" 
-		style="
-			background:  url('images/breweries/steamworks.jpg');
-			background-size: cover;
-			background-position: center;
-		">
-	</div>
-	<div class="shadow"></div>
-</header>
+<div data-ng-init="init()">
 
-<div id="detailContent">
-	<div class="container">
-		<section>
-			<p>{{brewery.address}}</p>
-		</section>
-		<section>
-			<h3>Hours</h3>
-			<p>{{brewery.hours}}</p>
-		</section>
-		<section>
-			<h3>About</h3>
-			<p>{{brewery.description}}</p>
-		</section>
-		<section>
-			<h3>Neighbourhood</h3>
-			<p>{{brewery.neighbourhood}}</p>
-			<img src="images/placeholder.jpg" class="placeholderImg">
-		</section>
-		<section>
-			<h3>Contact</h3>
-			<p>{{brewery.phone}}</p>
-		</section>
+	<header class="detail-view">
+		<a href="./#/breweries">
+			<img src="images/icons/back_white.svg" class="nav_icon">
+		</a>
+		<div class="navTitleMobile">
+			<span>{{brewery.name}}</span>
+		</div>
+		<div class="heroImage" 
+			style="
+				background:  url('images/breweries/steamworks.jpg');
+				background-size: cover;
+				background-position: center;
+			">
+		</div>
+		<div class="shadow"></div>
+	</header>
 
-		<section>
-			<h3>Beers</h3>
-			<p ng-model="brewbrew">{{brewery.name}}</p>
-			<p ng-repeat="beer in beers | filter:{$:'{{brewery.name}}'}">{{beer.name}}<br><br></p>
-		</section>
-		...we're planning on sweet graphical ways to show this stuff. But ain't nobody got time to wireframe dat.
+	<div id="detailContent">
+		<div class="container">
+			<section>
+				<p>{{brewery.address}}</p>
+			</section>
+			<section>
+				<h3>Hours</h3>
+				<p>{{brewery.hours}}</p>
+			</section>
+			<section>
+				<h3>About</h3>
+				<p>{{brewery.description}}</p>
+			</section>
+			<section>
+				<h3>Neighbourhood</h3>
+				<p>{{brewery.neighbourhood}}</p>
+				<img src="images/placeholder.jpg" class="placeholderImg">
+			</section>
+			<section>
+				<h3>Contact</h3>
+				<p>{{brewery.phone}}</p>
+			</section>
 
+			<section>
+				<h3>Beers</h3>
+				<p ng-model="brewbrew">{{brewery.name}}</p>
+				<p ng-repeat="beer in beers | filter:{$:'{{brewery.name}}'}">{{beer.name}}<br><br></p>
+			</section>
+			...we're planning on sweet graphical ways to show this stuff. But ain't nobody got time to wireframe dat.
+
+		</div>
 	</div>
 </div>

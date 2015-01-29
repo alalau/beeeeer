@@ -17,10 +17,8 @@
 
 <body ng-app="beerApp">
 
-
-
 	<div id="swipe-area">
-		<div ng-view="" autoscroll="true"></div>
+		<div ng-view="" autoscroll="true" class="page {{ pageClass }}" ></div>
 		<div id="menu">
 			<a href="#/breweries" class="selected">Breweries</a>
 			<a href="#/beers">Beers</a>

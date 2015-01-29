@@ -20,4 +20,6 @@ angular.module('beerApp')
     $http.get('json/beers.json').success(function(data) {
         $scope.beers = data;
     });
+    $scope.pageClass = 'page-details';
+
 }]);

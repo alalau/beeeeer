@@ -15,6 +15,8 @@ angular.module('beerApp')
 		});
  
    		$scope.orderProp = 'name';
+
+   		$scope.pageClass = 'page-home';
 }]);
 
 

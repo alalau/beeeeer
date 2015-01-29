@@ -514,3 +514,48 @@ p.temporary-text {
 	width: 100%;
 	opacity: 0.5;
 }
+
+
+/* ANIMATIONS
+============================================================================= */
+
+/*
+
+@keyframes slideOutRight {
+	from	{ transform: translateX(0%);}
+    to      { transform: translateX(100%); }
+}
+
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+
+@keyframes slideOutLeft {
+	from	{ transform: translateX(0%);}
+    to      { transform: translateX(100%); }
+}
+
+@keyframes slideOutLeft {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+
+.page-home.ng-enter {
+	z-index: -1;
+}
+
+.page-home.ng-leave {
+	z-index: -1;
+}
+
+.page-details.ng-enter        { 
+	animation:slideInRight 200ms both ease-in; 
+	z-index: 99999999;
+}
+.page-details.ng-leave        { 
+	animation: slideOutRight 200ms both ease-in;
+	animation: slideOutRight 200ms both ease-in;
+	z-index: 99999999; 
+}
+*/
