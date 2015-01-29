@@ -22,20 +22,6 @@
 		}
 	});
 	
-	$(window).scroll(function(){
-        var w = $(window).width();
-        beerTop = $("#brewerResults").offset().top - $(window).scrollTop();
-        if (w < 720) {
-        	if (beerTop < ($(window).height() / 2)) {
-        		$('#fab').addClass('mapIcon');
-        	} else {
-        		$('#fab').removeClass('mapIcon');
-        	}
-        } else {
-        	$('#fab').removeClass('mapIcon');
-        }
-	});
-
    	$(window).scroll(function(){
 
 		var scrollTop = $(window).scrollTop();
