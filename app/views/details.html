@@ -1,28 +1,3 @@
-<script>
-
-	$(window).scroll(function(){
-
-		var scrollTop = $(window).scrollTop();
-
-        var w = $(window).width();
-        contentTop = $("#detailContent").offset().top - scrollTop;
-    	if (contentTop < 80) {
-    		$('header').removeClass('detail-view');
-    	} else {
-    		$('header').addClass('detail-view');
-    	}
-		
-		var newOpacity = 1 - $(window).scrollTop() / 300;
-        $(".shadow").css({
-            opacity: newOpacity
-        });   
-        $(".heroImage").css({
-            opacity: newOpacity
-        });   		
-   });
-
-</script>
-
 
 <header class="detail-view">
 	<a href="./#/beers">

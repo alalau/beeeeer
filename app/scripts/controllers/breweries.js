@@ -1,11 +1,9 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name beerAppApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the beerAppApp
+/*
+ *
+ * MAP STYLES
+ *
  */
 
 var styles = [
@@ -212,13 +210,15 @@ var styles = [
 	}
 ]
 
+
+/*
+ *
+ * Controller
+ *
+ */
+
 angular.module('beerApp')
   .controller('BreweryListController', ['$scope', '$http', function($scope, $http) {
-		$http.get('json/breweries.json').success(function(data) {
-			$scope.breweries = data;
-		});
- 
-   		$scope.orderProp = 'name';
 
    		// Google Map Hero
    		$scope.map = { 
@@ -239,7 +239,37 @@ angular.module('beerApp')
    			}
    		}
 
+
+
+        $scope.markers = [];
+        var idNum = 0;
+
+        $http.get('json/breweries.json').success(function(data) {
+            $scope.breweries = data;
+
+            angular.forEach(data, function(item) { 
+
+                var address = "#/breweries/" + item.id;
+                var marker = {
+                  id: idNum,
+                  coords: {
+                    latitude: item.latitude,
+                    longitude: item.longitude
+                  },
+                  icon: '../images/brewery_icon.png',
+                  events: {
+                    click: function () {
+                        window.location.href = address;
+                    }
+                  }
+                };
+                $scope.markers.push(marker);
+                idNum++;
+            });
+
+        });
+ 
+        $scope.orderProp = 'name';
+
 }]);
-
-
   

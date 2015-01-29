@@ -2,55 +2,109 @@
     {
         "name": "Steamworks Brew Pub",
         "id": "steamworks",
-        "description": "In 1995, when Steamworks first took hold of their historic Gastown brewpub location, they discovered that the building had a rare steam heat system. A remnant from forward thinkers of a century past.\n\nThe brewmaster had only read of steam powered brewing, but had never seen a functional steam brewery. These are very rare indeed. They ventured forth, experimented, and created a one-of-a-kind steam generated brewery. The only one in Canada. To our pleasure, Steamworks found their test brews to be distinctively fresh and flavourful. For nearly 20 years, beer aficionados have been migrating to SteamWorks brewpub for a taste of these unconventional beers. \n\nSince 2013, with the advent of our Brewery in Burnaby Heights, you can now take the brewpub experience home with you.\n\nBottling, Kegging and Canning Tallboys, Steamworks is still brewing with the Power of Steam.",
+        "latitude": 49.284975,
+        "longitude": -123.110825,
+        "coord": "latitude: 49.284975, \nlongitude: -123.110825",
+        "description": "In 1995, when Steamworks first took hold of their historic Gastown brewpub location, they discovered that the building had a rare steam heat system. A remnant from forward thinkers of a century past.\nThe brewmaster had only read of steam powered brewing, but had never seen a functional steam brewery. These are very rare indeed. They ventured forth, experimented, and created a one-of-a-kind steam generated brewery. The only one in Canada. To our pleasure, Steamworks found their test brews to be distinctively fresh and flavourful. For nearly 20 years, beer aficionados have been migrating to SteamWorks brewpub for a taste of these unconventional beers. \n\nSince 2013, with the advent of our Brewery in Burnaby Heights, you can now take the brewpub experience home with you.\n\nBottling, Kegging and Canning Tallboys, Steamworks is still brewing with the Power of Steam.",
         "address": "The Landing, 375 Water Street, Vancouver, BC V6B 1B8",
         "neighbourhood": "Down Town",
         "beernumber": 13,
         "hours": "11:30am - 12:00am",
-        "phone": "(604) 689-2739"
+        "phone": "(604) 689-2739",
+        "website": "http://steamworks.com/brew-pub"
     },
     {
         "name": "Patricia Hotel Brew Pub",
-        "id": "patriciahotel"
+        "id": "patriciahotel",
+        "latitude": 49.281519,
+        "longitude": -123.094982,
+        "coord": "latitude: 49.281519, \nlongitude: -123.094982",
+        "description": "If you’re looking for a quick bite, a place to watch the game or great live entertainment, Pat’s has you covered!\nJoin us for a pint of “Pat’s Classic Lager” and enjoy our all natural preservative free beer that’s micro-brewed on site!\nTry something from the grill! We’re famous for our handmade monster burgers and traditional pub fair. Also try our specialty-smoked brisket and pulled pork sandwiches prepared on a charcoal BBQ!",
+        "address": "403 East Hastings Street",
+        "beernumber": 1,
+        "hours": "11:00 am – 12:00 am",
+        "phone": "(604) 255-4301",
+        "website": "http://www.patspub.ca/\n"
     },
     {
         "name": "Storm Brewing",
-        "id": "storm"
+        "id": "storm",
+        "latitude": 49.282011,
+        "longitude": -123.070231,
+        "coord": "latitude: 49.282011, \nlongitude: -123.070231",
+        "address": "Vancouver BC, V6A 1P6"
     },
     {
         "name": "Powell Street Brewing",
-        "id": "powellstreet"
+        "id": "powellstreet",
+        "latitude": 49.283323,
+        "longitude": -123.075781,
+        "coord": "latitude: 49.283323, \nlongitude: -123.075781"
     },
     {
         "name": "Parallel 49 Brewing",
-        "id": "parallel49"
+        "id": "parallel49",
+        "latitude": 49.283906,
+        "longitude": -123.064405,
+        "coord": "latitude: 49.283906, \nlongitude: -123.064405"
     },
     {
         "name": "Bomber Brewing",
-        "id": "bomber"
+        "id": "bomber",
+        "latitude": 49.277601,
+        "longitude": -123.074373,
+        "coord": "latitude: 49.277601, \nlongitude: -123.074373",
+        "description": "It's a truly Canadian story – hockey, friendship and beer. From the ice rink to the brewery, Bomber Brewing began as a dream between three friends who share a passion for playing hockey and savouring good beer. They brew the beer they want to drink and abide by the creed: unite the everyman, the novice and the beer connoisseur with great beer!",
+        "address": "1488 Adanac Street, Vancouver, BC",
+        "hours": "12:00 am – 11:00 pm",
+        "phone": "(604) 428-7457",
+        "website": "bomberbrewing.com"
     },
     {
         "name": "Brassneck Brewery",
-        "id": "brassneck"
+        "id": "brassneck",
+        "latitude": 49.26568,
+        "longitude": -123.100674,
+        "coord": "latitude: 49.26568, \nlongitude: -123.100674"
     },
     {
         "name": "33 Acres",
-        "id": "33acres"
+        "id": "33acres",
+        "latitude": 49.263999,
+        "longitude": -123.105307,
+        "coord": "latitude: 49.263999, \nlongitude: -123.105307"
     },
     {
         "name": "R&B Brewing",
-        "id": "rb"
+        "id": "rb",
+        "latitude": 49.267138,
+        "longitude": -123.103304,
+        "coord": "latitude: 49.267138, \nlongitude: -123.103304"
     },
     {
         "name": "Granville Island Brewing",
-        "id": "granvilleisland"
+        "id": "granvilleisland",
+        "latitude": 49.270552,
+        "longitude": -123.135782,
+        "coord": "latitude: 49.270552, \nlongitude: -123.135782"
     },
     {
         "name": "Dockside Brewing",
-        "id": "dockside"
+        "id": "dockside",
+        "latitude": 49.26948,
+        "longitude": -123.131295,
+        "coord": "latitude: 49.26948, \nlongitude: -123.131295"
     },
     {
         "name": "Yaletown Brewing",
-        "id": "yaletown"
+        "id": "yaletown",
+        "latitude": 49.275489,
+        "longitude": -123.120894,
+        "coord": "latitude: 49.275489, \nlongitude: -123.120894",
+        "description": "The Yaletown Brewing Company is Vancouver’s original and best Brewpub. Founded in 1994, just as the former warehouse district of Yaletown was just beginning to emerge as a destination for businesses and residents, the YBC was built with the vision of being a true neighbourhood pub – a welcoming gathering place whether you arrived dressed in a suit or flip-flops.",
+        "address": "1111 Mainland St, Vancouver, BC",
+        "neighbourhood": "Down Town",
+        "phone": "(604) 681-2739",
+        "website": "http://www.mjg.ca/yaletown/"
     }
 ]
