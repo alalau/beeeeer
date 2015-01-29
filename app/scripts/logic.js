@@ -1,10 +1,8 @@
-
-<script>
-	$( window ).resize(function() {
+$( window ).resize(function() {
 		var h = $(window).height();
 		var w = $(window).width();
 
-		var newH = h - ($(window).width() / 8);
+		var newH = h - (h / 8);
 		if (w > 720) {
 			$('#vancouverMap').css({
 		        height: newH
@@ -80,10 +78,10 @@
 	    return false;
 	});
 
-	$('#filterBtn').click(function() {
+	$('#filterBtn2').click(function() {
 		$('#filter-panel').toggleClass("open");
 		$('#vancouverMap').toggleClass("makeSpaceForFilter");
-		$('#brewerResults').toggleClass("makeSpaceForFilter");
+		$('#beerResults').toggleClass("makeSpaceForFilter");
 	});
 
 	$('#menuBtn').click(function() {
@@ -95,64 +93,3 @@
 			menuhidden = false;
 		}
 	});
-</script>
-
-<div ng-controller="BreweryListController" data-ng-init="init()">
-	<header class="main">
-		<button class="menuBtn" id="menuBtn">
-			<img src="images/icons/menu_white.svg" class="nav_icon mobile">
-		</button>
-		<div class="navTitleMobile mobile">
-			<span>Breweries</span>
-		</div>
-		<div class="navDesktop desktop">
-			<a href="#/breweries" class="selected">Breweries</a>
-			<a href="#/beers">Beers</a>
-		</div>
-
-		<div class="searchbox">
-			<span class="searchicon"></span>
-			<input ng-model="query" class="unstyled" id="search">
-		</div>
-	</header>
-
-	<div id="vancouverMap" >
-		<div class="map-container">
-			<ui-gmap-google-map center='map.center' zoom='map.zoom'options='map.options'>
-				<ui-gmap-marker ng-repeat="marker in markers"
-					coords="marker.coords" 
-					options="marker.options" 
-					events="marker.events" 
-					idkey="marker.id"
-					click="marker.click"
-					icon="marker.icon">
-			</ui-gmap-google-map>
-		</div>
-		<a id="fab" class="fab-btn btn-next"></a>
-	</div>
-
-	<section id="brewerResults" class="pushBelowHeader">
-		<div class="container">
-			<p>Order: 
-				<select ng-model="orderProp">
-					<option value="name">Alphabetical</option>
-					<option value="">Most Beers</option>
-					<option value="">Least Beers</option>
-				</select>
-			</p>
-			<span class="line"></span>
-			<div class="row" ng-repeat="brewery in breweries | filter:query | orderBy:orderProp">
-				<a href="#/breweries/{{brewery.id}}">
-					<div class="beerListInfo col-xs-12">
-						<h3>{{brewery.name}}</h3>
-						<p>{{brewery.address}}</p>
-					</div>
-				</a>
-			</div>
-		</div>
-
-
-		<my-directive x-user-defined-function="whenSuccessFunction(data)"></my-directive>
-
-	</section>
-</div>

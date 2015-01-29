@@ -1,31 +1,6 @@
 
 <script src="scripts/horizontal-scrolling.js"></script>
-
-<script>
-	$('#filterBtn2').click(function() {
-		$('#filter-panel').toggleClass("open");
-		$('#vancouverMap').toggleClass("makeSpaceForFilter");
-		$('#beerResults').toggleClass("makeSpaceForFilter");
-	});
-	$('#menuBtn').click(function() {
-		if ( menuhidden == false ) {
-			$( menu ).animate({left: "-=250"}, 250);
-			menuhidden = true;
-		} else if ( menuhidden == true ) {
-			$( menu ).animate({left: "+=250"}, 250);
-			menuhidden = false;
-		}
-	});
-</script>
-
-<script>
-	$(document).ready(function() {
-	    $('#stylePicker').mousewheel(function(e, delta) {
-	        this.scrollLeft -= (delta * 40);
-	        e.preventDefault();
-	    });
-	});
-</script>
+<script src="scripts/logic.js"></script>
 
 <header class="main">
 	<button class="menuBtn" id="menuBtn">

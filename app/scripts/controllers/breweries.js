@@ -278,7 +278,7 @@ angular.module('beerApp')
         $scope.init = function () {
             var h = $(window).height();
             var w = $(window).width();
-            var newH = h - ($(window).width() / 8);
+            var newH = h - (h / 8);
             if (w > 720) {
                 $('#vancouverMap').css({
                     height: newH
