@@ -83,13 +83,3 @@ $( window ).resize(function() {
 		$('#vancouverMap').toggleClass("makeSpaceForFilter");
 		$('#beerResults').toggleClass("makeSpaceForFilter");
 	});
-
-	$('#menuBtn').click(function() {
-		if ( menuhidden == false ) {
-			$( menu ).animate({left: "-=250"}, 250);
-			menuhidden = true;
-		} else if ( menuhidden == true ) {
-			$( menu ).animate({left: "+=250"}, 250);
-			menuhidden = false;
-		}
-	});

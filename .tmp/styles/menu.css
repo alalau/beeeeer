@@ -1,7 +1,6 @@
-#swipe-area {
-	height: auto;
-	position: relative;
-}
+ /* =========================================================
+ * menu panel
+ * ========================================================= */
 
 #menu {
 	visibility: hidden;
@@ -9,11 +8,37 @@
 	width: 250px;
 	height: 100%;
 	position: fixed;
-	top:0px;
-	left:-250px;
+	top:0;
+	left:0;
+	margin-left: -250px;
 	background: #444;
-	z-index: 1;
-	/*padding-top: 64px;*/
+	z-index: 10;
+
+	border-left: 1px solid rgba(0,0,0,0.1);
+	transition: 		all .28s cubic-bezier(.4,0,.2,1);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+/*	padding: 20px;
+	padding-top: 84px;*/
+}
+
+#menu.open {
+	margin-left: 0;
+}
+
+ /* =========================================================
+ * menu panel
+ * ========================================================= */
+
+
+#swipe-area {
+	height: auto;
+	position: relative;
+}
+
+#menu {
+
 }
 
 #menu a {
