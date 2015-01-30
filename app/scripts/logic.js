@@ -1,16 +1,19 @@
 $( window ).resize(function() {
+		/*
+		Resize components for window size
+		*/
 		var h = $(window).height();
 		var w = $(window).width();
 
 		var newH = h - (h / 8);
-		if (w > 720) {
+		if (w > 720) { //if on computer
 			$('#vancouverMap').css({
 		        height: newH
 		    });
 		    $('.angular-google-map-container').css({
 		        height: newH + 30
 		    });
-		} else {
+		} else { //mobile
 			$('#vancouverMap').css({
 		        height: h - 56
 		    });
