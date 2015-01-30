@@ -27,6 +27,7 @@ body {
 h1, h2 {
 	margin: 0;
 	padding: 0;
+	font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -177,8 +178,8 @@ header .searchbox {
 	position: absolute;
 	top: 0;
 	left: 80px;
-	font-size: 18px;
-	margin: 20px 0;
+	font-size: 24px;
+	margin: 14px 0;
 }
 
 .navDesktop a, .filterBtn span {

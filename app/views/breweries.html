@@ -22,7 +22,7 @@
 
 	<div id="vancouverMap" >
 		<div class="map-container">
-			<ui-gmap-google-map center='map.center' zoom='map.zoom'options='map.options'>
+			<ui-gmap-google-map center='map.center' zoom='map.zoom' options='map.options'>
 				<ui-gmap-marker ng-repeat="marker in markers"
 					coords="marker.coords" 
 					options="marker.options" 
@@ -37,13 +37,15 @@
 
 	<section id="brewerResults" class="pushBelowHeader">
 		<div class="container">
-			<p>Order: 
-				<select ng-model="orderProp">
-					<option value="name">Alphabetical</option>
-					<option value="">Most Beers</option>
-					<option value="">Least Beers</option>
-				</select>
-			</p>
+			<div class="beerListInfo col-xs-12">
+				<p>Order: 
+					<select ng-model="orderProp">
+						<option value="name">Alphabetical</option>
+						<option value="">Most Beers</option>
+						<option value="">Least Beers</option>
+					</select>
+				</p>
+			</div>
 			<span class="line"></span>
 			<div class="row" ng-repeat="brewery in breweries | filter:query | orderBy:orderProp">
 				<a href="#/breweries/{{brewery.id}}">
