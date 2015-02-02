@@ -1,0 +1,12 @@
+{
+    "name": "Gypsy Tears",
+    "id": "gypsytears",
+    "brewery": "Parallel 49 Brewing",
+    "style": "Ruby Ale",
+    "description": "A ruby red coloured ale with a rich caramel malt flavour and a burst of West Coast hops. Using only late hop additions and dry-hopping, the bitterness is restrained while the hop flavour and aroma are pronounced.",
+    "alchohol": 6,
+    "bitterness": 40,
+    "calories": "unknown",
+    "effervescence": "unknown",
+    "img": "beers/images/gypsytears.jpg"
+}
