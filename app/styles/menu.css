@@ -5,12 +5,12 @@
 #menu {
 	visibility: hidden;
 	display: none;
-	width: 200px;
+	width: 250px;
 	height: 100%;
 	position: fixed;
 	top:0;
 	left:0;
-	margin-left: -200px;
+	margin-left: -250px;
 	background: #444;
 	z-index: 10;
 
@@ -40,21 +40,20 @@
 }
 
 #menu {
+
 }
 
 #menu a {
 	visibility: hidden;
 	display: none;
 	width: 100%;
-	height: 100px;
-	line-height: 100px;
-
+	height: 240px;
+	line-height: 240px;
 	text-align: center;
 	position: relative;
 	display: inline-block;
 	color: #fff;
-	/*font-size: 1.5em; */
-	font-size: 16pt;
+	font-size: 1.5em;
 	text-decoration: none;
 }
 
@@ -75,6 +74,5 @@
 }
 #menu a:active {
 	text-decoration: none;
-	/*background-color: #27AE60; */
-	background-color: #CD2300; /* Orange to match the beer. Green is ugly with grey */
+	background-color: #27AE60;
 }

@@ -1,4 +1,4 @@
-/* =========================================================
+ /* =========================================================
  * Scrollbars
  * ========================================================= */
 
@@ -161,8 +161,8 @@ header .searchbox {
 	position: absolute;
 	top: 0;
 	left: 80px;
-	font-size: 24px;
-	margin: 14px 0;
+	font-size: 18px;
+	margin: 20px 0;
 }
 
 .navDesktop a, .filterBtn span {
@@ -205,10 +205,9 @@ header .searchbox {
 .nav_icon {
 	background-size: 24px;
 	display: inline-block;
-	height: 50px;
-	margin-left: 12px;
-	margin-top: 8px;
-	width: 50px;
+	height: 24px;
+	margin: 20px 24px;
+	width: 24px;
 	-webkit-user-drag: none;
 	opacity: 1;
 	float: left;
@@ -425,10 +424,6 @@ header.detail-view {
 
 .detail-view .nav_icon {
 	position: fixed;
-	width: 50px;
-	height:50px;
-	margin-left: 12px;
-	margin-top: 8px;
 }
 
 .detail-view .navTitleMobile {
@@ -478,15 +473,6 @@ img.headerImage {
 #detailContent section {
 	padding: 20px 0;
 }
-
-#detailContent canvas {
-	width: 300px;
-	height: 50px;
-	border: 10px solid #B0B0B0;
-    border-radius: 50px;
-	margin-top: 10px;
-}
-
 
 p.temporary-text {
 	position: absolute;

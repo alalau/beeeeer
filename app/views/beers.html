@@ -17,7 +17,7 @@
 
 	<div class="searchbox">
 		<span class="searchicon"></span>
-		<input type="text" ng-model="query.name" class="unstyled">
+		<input ng-model="query" class="unstyled">
 	</div>
 
 	<button class="filterBtn" id="filterBtn2">
@@ -46,7 +46,6 @@
 			<a href="#/beers/{{beer.id}}">
 				<div class="beerListInfo col-xs-12">
 					<div class="beerTitle">
-						<!--<h3 ng-bind-template="{{beer.name}}">Beer</h3>-->
 						<h3>{{beer.name}}</h3>
 						<p>{{beer.brewery}}</p>
 					</div>
