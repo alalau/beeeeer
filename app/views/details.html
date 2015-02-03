@@ -1,19 +1,12 @@
 
 <header class="detail-view">
 	<a href="./#/beers">
-		<img src="images/icons/back_white.svg" class="nav_icon">
+		<img src="images/icons/back_dark.svg" class="nav_icon">
 	</a>
 	<div class="navTitleMobile">
 		<span>{{beer.name}}</span>
 	</div>
-	<div class="heroImage" 
-		style="
-			background:  url('images/beers/beer.png');
-			background-size: cover;
-			background-position: center;
-		">
-	</div>
-	<div class="shadow"></div>
+	<img src="images/beers/steamworks_placeholder.jpg" class="detail-img">
 </header>
 
 <div id="detailContent">
@@ -23,6 +16,7 @@
 		</section>
 		<section>
 			<h3>Style</h3>
+			<img src="images/beer_icon.svg" class="beer-icon">
 			<p>{{beer.style}}</p>
 		</section>
 		<section>
@@ -31,11 +25,11 @@
 		</section>
 		<section>
 			<h3>Alcohol (ABV):</h3>
-			<h3>{{beer.alcohol}}%</h3>
+			<h1>{{beer.alcohol}}%</h1>
 		</section>
 		<section>
 			<h3>Bitterness (IBU):</h3>
-			<h3>{{beer.bitterness}}</h3>
+			<h1>{{beer.bitterness}}</h1>
 		</section>
 		...we're planning on sweet graphical ways to show this stuff. But ain't nobody got time to wireframe dat.
 	</div>
