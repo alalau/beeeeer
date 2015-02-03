@@ -4,19 +4,20 @@
 <div ng-controller="BreweryListController" data-ng-init="init()">
 	<header class="main">
 		<button class="menuBtn">
-			<img src="images/icons/menu_white.svg" class="nav_icon mobile">
+			<img src="images/icons/menu_dark.svg" class="nav_icon mobile">
 		</button>
 		<div class="navTitleMobile mobile">
 			<span>Breweries</span>
 		</div>
 		<div class="navDesktop desktop">
+			<div class="logo"></div>
 			<a href="#/breweries" class="selected">Breweries</a>
 			<a href="#/beers">Beers</a>
 		</div>
 
-		<div class="searchbox">
-			<span class="searchicon"></span>
-			<input ng-model="query" class="unstyled" id="search">
+		<div id="search" class="searchbox">
+			<span class="searchicon" id="close-search"></span>
+			<input ng-model="query" class="unstyled" id="search-input">
 		</div>
 	</header>
 

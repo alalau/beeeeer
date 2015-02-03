@@ -12,13 +12,13 @@ var styles = [
         "elementType": "labels.text.fill",
         "stylers": [
             {
-                "saturation": 36
+                "saturation": 26
             },
             {
-                "color": "#000000"
+                "color": "#425260"
             },
             {
-                "lightness": 40
+                "lightness": 0
             }
         ]
     },
@@ -30,10 +30,10 @@ var styles = [
                 "visibility": "on"
             },
             {
-                "color": "#000000"
+                "color": "#425260"
             },
             {
-                "lightness": 16
+                "lightness": 6
             }
         ]
     },
@@ -51,10 +51,10 @@ var styles = [
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#000000"
+                "color": "#425260"
             },
             {
-                "lightness": 20
+                "lightness": 10
             }
         ]
     },
@@ -63,10 +63,10 @@ var styles = [
         "elementType": "geometry.stroke",
         "stylers": [
             {
-                "color": "#000000"
+                "color": "#425260"
             },
             {
-                "lightness": 17
+                "lightness": 7
             },
             {
                 "weight": 1.2
@@ -78,10 +78,10 @@ var styles = [
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#000000"
+                "color": "#425260"
             },
             {
-                "lightness": 20
+                "lightness": 10
             }
         ]
     },
@@ -90,10 +90,10 @@ var styles = [
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#000000"
+                "color": "#425260"
             },
             {
-                "lightness": 21
+                "lightness": 11
             }
         ]
     },
@@ -102,10 +102,10 @@ var styles = [
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#000000"
+                "color": "#425260"
             },
             {
-                "lightness": 17
+                "lightness": 7
             }
         ]
     },
@@ -114,10 +114,10 @@ var styles = [
         "elementType": "geometry.stroke",
         "stylers": [
             {
-                "color": "#000000"
+                "color": "#425260"
             },
             {
-                "lightness": 29
+                "lightness": 19
             },
             {
                 "weight": 0.2
@@ -129,10 +129,10 @@ var styles = [
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#000000"
+                "color": "#425260"
             },
             {
-                "lightness": 18
+                "lightness": 8
             }
         ]
     },
@@ -141,10 +141,10 @@ var styles = [
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#000000"
+                "color": "#425260"
             },
             {
-                "lightness": 16
+                "lightness": 6
             }
         ]
     },
@@ -153,10 +153,10 @@ var styles = [
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#000000"
+                "color": "#425260"
             },
             {
-                "lightness": 19
+                "lightness": 9
             }
         ]
     },
@@ -165,10 +165,10 @@ var styles = [
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#000000"
+                "color": "#3d4f5b"
             },
             {
-                "lightness": 17
+                "lightness": 0
             }
         ]
     },
@@ -256,7 +256,7 @@ angular.module('beerApp')
                     latitude: item.latitude,
                     longitude: item.longitude
                   },
-                  icon: '../images/brewery_icon.png',
+                  icon: '../images/marker.png',
                   events: {
                     click: function () {
                         window.location.href = address;

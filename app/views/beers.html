@@ -11,19 +11,21 @@
 		<span>Beers</span>
 	</div>
 	<div class="navDesktop desktop">
+		<div class="logo"></div>
 		<a href="#/breweries">Breweries</a>
 		<a href="#/beers" class="selected">Beers</a>
-	</div>
-
-	<div class="searchbox">
-		<span class="searchicon"></span>
-		<input ng-model="query" class="unstyled">
 	</div>
 
 	<button class="filterBtn" id="filterBtn2">
 		<img src="images/icons/filter_white.svg" class="nav_icon">
 		<span>Filter</span>
 	</button>
+
+	<div id="search" class="searchbox">
+		<span class="searchicon" id="close-search"></span>
+		<input ng-model="query" class="unstyled" id="search-input" placeholder="Search">
+	</div>
+
 </header>
 
 <div id="filter-panel">

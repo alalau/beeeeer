@@ -1,4 +1,5 @@
-$( window ).resize(function() {
+	
+	$( window ).resize(function() {
 		var h = $(window).height();
 		var w = $(window).width();
 
@@ -67,12 +68,12 @@ $( window ).resize(function() {
 			    }, 500);
 			} else {
 				$('html, body').animate({
-		        	scrollTop: $('#brewerResults').offset().top - 64
+		        	scrollTop: $('#brewerResults').offset().top - 120
 		    	}, 500);
 			}
 		} else {
 			$('html, body').animate({
-		        scrollTop: $('#brewerResults').offset().top - 64
+		        scrollTop: $('#brewerResults').offset().top - 120
 		    }, 500);
 		}
 	    return false;
@@ -83,3 +84,16 @@ $( window ).resize(function() {
 		$('#vancouverMap').toggleClass("makeSpaceForFilter");
 		$('#beerResults').toggleClass("makeSpaceForFilter");
 	});
+
+	$('.searchicon').click(function() {
+
+		var w = $(window).width();
+		if (w < 720) {
+	    	$('#search-input').focus();
+			$('#search').toggleClass("active");
+		}
+		$('html, body').animate({
+        	scrollTop: $('#brewerResults').offset().top - 120
+    	}, 500);
+	});
+
