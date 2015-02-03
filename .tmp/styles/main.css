@@ -556,6 +556,7 @@ p.temporary-text {
 	position: absolute;
 	left: 0;
 	top: 0;
+	padding: 30px;
 }
 
 .card a p {
@@ -572,6 +573,17 @@ p.temporary-text {
 	text-align: left;
 	padding-bottom: 8px;
 	margin-bottom: 0;
+}
+
+.brewery-logo {
+	height: 100%;
+}
+
+.detail-img {
+	margin: 0 auto;
+	display: inherit;
+	height: 250px;
+	margin-top: 40px;
 }
 
 /* ANIMATIONS

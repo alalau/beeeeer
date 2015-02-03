@@ -48,11 +48,11 @@
 	    		$('header').addClass('detail-view');
 	    	}
 			
-			var newOpacity = 1 - $(window).scrollTop() / 300;
-	        $(".shadow").css({
+			var newOpacity = 1 - $(window).scrollTop() / 250;
+	        $(".detail-img").css({
 	            opacity: newOpacity
 	        });   
-	        $(".heroImage").css({
+	        $(".detail-img").css({
 	            opacity: newOpacity
 	        });   		
 	    }
