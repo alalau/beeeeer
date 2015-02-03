@@ -72,6 +72,29 @@ header {
 	z-index: 1000;
 }
 
+/* --------------------------
+ * brand name element styles
+ * left in for later i'm lazy
+ * -------------------------- /
+
+/*#brand-name {
+	font-family: "Montserrat";
+	font-size: 36px;
+	font-weight: 700;
+	position: absolute;
+	bottom: 24px;
+	right: 24px;
+	color:#f37a4d;
+	z-index: 10;
+	text-transform: uppercase;
+	text-shadow: .25px .25px 2px #3d4e5b;
+}
+
+#brand-name span {
+	text-shadow: .25px .25px 2px #fff;
+	color:#3d4e5b;	
+}*/
+
 .logo {
 	height: 64px;
 	width: 94px;
