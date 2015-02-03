@@ -16,21 +16,12 @@
 		<a href="#/beers" class="selected">Beers</a>
 	</div>
 
-	<button class="filterBtn" id="filterBtn2">
-		<img src="images/icons/filter_white.svg" class="nav_icon">
-		<span>Filter</span>
-	</button>
-
 	<div id="search" class="searchbox">
 		<span class="searchicon"></span>
 		<input ng-model="query" class="unstyled" id="search-input" placeholder="Search">
 	</div>
 
 </header>
-
-<div id="filter-panel">
-	filter options... coming soon.
-</div>
 
 <section id="beerResults" class="pushBelowHeader">
 	<div class="container">
@@ -44,9 +35,10 @@
 			</select>
 		</p>
 		<span class="line"></span>
-		<div class="row" ng-repeat="beer in beers | filter:query | orderBy:orderProp">
+		<div class="card2" ng-repeat="beer in beers | filter:query | orderBy:orderProp">
 			<a href="#/beers/{{beer.id}}">
 				<div class="beerListInfo col-xs-12">
+					<img src="images/beer_icon.svg" class="beer-icon">
 					<div class="beerTitle">
 						<h3>{{beer.name}}</h3>
 						<p>{{beer.brewery}}</p>

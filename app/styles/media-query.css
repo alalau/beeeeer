@@ -111,6 +111,15 @@ and (max-width : 720px) {
 		width: 60px;
 	}
 
+	.card {
+		width: 100%;
+		padding-top: 60%;
+	}
+
+	.beerData {
+		display: none;
+	}
+
 }
 
 

@@ -101,7 +101,7 @@ p {
 span.line {
 	width: 100%;
 	height: 1px;
-	background: rgba(0,0,0,0.5);
+	background: rgba(0,0,0,0.2);
 	display: block;
 	margin: 30px 0;
 }
@@ -277,11 +277,6 @@ header .searchbox {
 
 .beerTitle {
 	display: inline-block;
-	padding-right: 20px;
-	width: 200px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
 }
 
 .beerData {
@@ -289,7 +284,6 @@ header .searchbox {
 	width: 100px;
 	text-align: center;
 	color: rgba(0,0,0,0.5);
-	border-left: 1px solid rgba(0,0,0,0.1);
 }
 
 .right {
@@ -311,8 +305,19 @@ header .searchbox {
 
 }
 
-.beerListInfo h3, . {
-	font-size: 24px;
+h3 {
+	font-size: 22px;
+}
+
+.beerTitle p {
+	opacity: 0.5;
+}
+
+.beer-icon {
+	float: left;
+	padding: 17px;
+	padding-bottom: 5px;
+	padding-right: 27px;
 }
 
 
@@ -503,6 +508,48 @@ p.temporary-text {
 	opacity: 0.5;
 }
 
+.card, .card2 {
+	display: inline-block;
+	background: white;
+	box-sizing: border-box;
+	border-radius: 2px;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	width: 48%;
+	margin: 1%;
+	padding-bottom: 20px;
+	text-align: center;
+	padding-top: 30%;
+	position: relative;
+	transition: 		all .28s cubic-bezier(.4,0,.2,1);
+}
+
+.card:hover, .card2:hover {
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card a {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.card a p {
+	padding-top: 50%;
+}
+
+#brewerResults, #beerResults {
+	margin-bottom: 60px;
+}
+
+.card2 {
+	padding: 0;
+	width: 100%;
+	text-align: left;
+	padding-bottom: 8px;
+	margin-bottom: 0;
+}
 
 /* ANIMATIONS
 ============================================================================= */
