@@ -86,7 +86,6 @@
 	});
 
 	$('.searchicon').click(function() {
-
 		var w = $(window).width();
 		if (w < 720) {
 	    	$('#search-input').focus();
@@ -96,4 +95,3 @@
         	scrollTop: $('#brewerResults').offset().top - 120
     	}, 500);
 	});
-

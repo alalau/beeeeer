@@ -3,12 +3,26 @@
 // ----------------------------------------------------------------------------------
 var pad = document.getElementById("swipe-area");
 
+function closeMenu() {
+	$('#menu').removeClass("open");
+	$('#dim').removeClass("dimmed");
+}
+
 $('.menuBtn').click(function() {
 	$('#menu').toggleClass("open");
+	$('#dim').toggleClass("dimmed");
 });
 
 $('#menu a').click(function() {
-	$('#menu').removeClass("open");
+	closeMenu();
+});
+
+$('#close-menu').click(function() {
+	closeMenu();
+});
+
+$('#dim').click(function() {
+	closeMenu();
 });
 
 $(function() {

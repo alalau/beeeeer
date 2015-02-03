@@ -19,10 +19,30 @@
 
 	<div id="swipe-area">
 		<div ng-view="" autoscroll="true" class="page {{ pageClass }}" ></div>
+
+		<div id="dim"></div>
+
 		<div id="menu">
-			<a href="#/breweries">Breweries</a>
-			<a href="#/beers">Beers</a>
+			<div class="menu-header" id="close-menu">
+				<button class="menuBtn">
+					<img src="images/icons/close_dark.svg" class="nav_icon mobile">
+				</button>
+				<div class="logo"></div>
+			</div>
+			<div class="menu-links">
+				<div class="menu-link">
+					<a href="#/breweries" id="brewLink">
+						<span>Breweries</span>
+					</a>
+				</div>
+				<div class="menu-link">
+					<a href="#/beers" id="beerLink">
+						<span>Beers</span>
+					</a>
+				</div>
+			</div>
 		</div>
+
 	</div>
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
