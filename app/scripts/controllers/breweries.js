@@ -249,6 +249,10 @@ angular.module('beerApp')
 
             angular.forEach(data, function(item) { 
 
+                var iconimg = {
+                    url: '../images/markers/'+item.id+'.svg', // url
+                };
+
                 var address = "#/breweries/" + item.id;
                 var marker = {
                   id: idNum,
@@ -256,7 +260,7 @@ angular.module('beerApp')
                     latitude: item.latitude,
                     longitude: item.longitude
                   },
-                  icon: '../images/marker.png',
+                  icon: iconimg,
                   events: {
                     click: function () {
                         window.location.href = address;
