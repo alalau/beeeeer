@@ -1,0 +1,36 @@
+
+<header class="detail-view">
+	<a href="./#/beers">
+		<img src="images/icons/back_dark.svg" class="nav_icon">
+	</a>
+	<div class="navTitleMobile">
+		<span>{{beer.name}}</span>
+	</div>
+	<img src="images/beers/steamworks_placeholder.jpg" class="detail-img">
+</header>
+
+<div id="detailContent">
+	<div class="container">
+		<section>
+			<p>{{beer.brewery}}</p>
+		</section>
+		<section>
+			<h3>Style</h3>
+			<img src="images/beer_icon.svg" class="beer-icon">
+			<p>{{beer.style}}</p>
+		</section>
+		<section>
+			<h3>About</h3>
+			<p>{{beer.description}}</p>
+		</section>
+		<section>
+			<h3>Alcohol (ABV):</h3>
+			<h1>{{beer.alcohol}}%</h1>
+		</section>
+		<section>
+			<h3>Bitterness (IBU):</h3>
+			<h1>{{beer.bitterness}}</h1>
+		</section>
+		...we're planning on sweet graphical ways to show this stuff. But ain't nobody got time to wireframe dat.
+	</div>
+</div>

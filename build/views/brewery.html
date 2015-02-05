@@ -1,0 +1,72 @@
+
+<script>
+	/*
+	$(window).scroll(function(){
+
+		var scrollTop = $(window).scrollTop();
+
+        var w = $(window).width();
+        contentTop = $("#detailContent").offset().top - scrollTop;
+    	if (contentTop < 110) {
+    		$('header').removeClass('detail-view');
+    	} else {
+    		$('header').addClass('detail-view');
+    	}
+		
+		var newOpacity = 1 - $(window).scrollTop() / 300;
+        $(".shadow").css({
+            opacity: newOpacity
+        });   
+        $(".heroImage").css({
+            opacity: newOpacity
+        });   		
+   });
+*/
+
+</script>
+
+<div data-ng-init="init()">
+
+	<header class="detail-view">
+		<a href="./#/breweries">
+			<img src="images/icons/back_dark.svg" class="nav_icon">
+		</a>
+		<div class="navTitleMobile">
+			<span>{{brewery.name}}</span>
+		</div>
+		<img src="images/logos/{{brewery.id}}.png" class="detail-img">
+	</header>
+
+	<div id="detailContent">
+		<div class="container">
+			<section>
+				<p>{{brewery.address}}</p>
+			</section>
+			<section>
+				<h3>Hours</h3>
+				<p>{{brewery.hours}}</p>
+			</section>
+			<section>
+				<h3>About</h3>
+				<p>{{brewery.description}}</p>
+			</section>
+			<section>
+				<h3>Neighbourhood</h3>
+				<p>{{brewery.neighbourhood}}</p>
+				<img src="images/placeholder.jpg" class="placeholderImg">
+			</section>
+			<section>
+				<h3>Contact</h3>
+				<p>{{brewery.phone}}</p>
+			</section>
+
+			<section>
+				<h3>Beers</h3>
+				<p ng-model="brewbrew">{{brewery.name}}</p>
+				<p ng-repeat="beer in beers | filter:{$:'{{brewery.name}}'}">{{beer.name}}<br><br></p>
+			</section>
+			...we're planning on sweet graphical ways to show this stuff. But ain't nobody got time to wireframe dat.
+
+		</div>
+	</div>
+</div>
