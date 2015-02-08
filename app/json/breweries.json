@@ -10,7 +10,10 @@
         "beernumber": 8,
         "hours": "11:30am  – 12:00am",
         "phone": "(604) 689-2739",
-        "website": "http://steamworks.com/brew-pub"
+        "website": "http://steamworks.com/brew-pub",
+        "color": "#502b1b",
+        "highlight": "#ef7909",
+        "growlerprice": 10
     },
     {
         "name": "Patricia Hotel Brew Pub",
@@ -22,7 +25,10 @@
         "beernumber": 1,
         "hours": "11:00 am – 12:00 am",
         "phone": "(604) 255-4301",
-        "website": "http://www.patspub.ca/\n"
+        "website": "http://www.patspub.ca/\n",
+        "color": "#212122",
+        "highlight": "#2cc3f4",
+        "growlerprice": 10
     },
     {
         "name": "Storm Brewing",
@@ -32,9 +38,12 @@
         "description": "Storm Brewing thundered onto the market in June of 1995 with a brilliantly balanced ale called “Red Sky Alt” which was reminiscent of the great German Alt Biers of the Golden Years of European brewing.\n\nThe instant success of Red Sky quickly established the reputation of Brewmaster and owner, James Walton. He is perceived as an innovator and as a stickler for quality by both the media and the trade. For over 17 years James and Storm Brewing have been bringing Vancouverites innovative and unpretentious craft beer. From the Hurricane IPA to the Imperial Flanders Red Ale, every beer we brew is made in small batches to guarantee freshness; our beers are unfiltered, additive free, proudly local and always delicious.",
         "address": "310 Commercial Drive\nVancouver BC, V5L 3V6",
         "beernumber": 5,
-        "hours": "n/a",
+        "hours": "11:00 am – 12:00 am",
         "phone": "(604) 255-9119",
-        "website": "http://www.stormbrewing.org/"
+        "website": "http://www.stormbrewing.org/",
+        "color": "#212123",
+        "highlight": "#2cc3f5",
+        "growlerprice": 10
     },
     {
         "name": "Powell Street Brewing",
@@ -43,7 +52,11 @@
         "longitude": -123.075781,
         "address": "1357 Powell Street,\n Vancouver, BC",
         "beernumber": 12,
-        "website": "http://www.powellbeer.com/brewery/"
+        "hours": "11:00 am – 12:00 am",
+        "website": "http://www.powellbeer.com/brewery/",
+        "color": "#212124",
+        "highlight": "#2cc3f6",
+        "growlerprice": 10
     },
     {
         "name": "Parallel 49 Brewing",
@@ -53,9 +66,12 @@
         "description": "Driven by thirst. Brewing up quality craft beers that will inspire the enthusiast in all of us.",
         "address": "1950 Triumph St\nVancouver BC\nCanada\nV5L 1K5",
         "beernumber": 5,
-        "hours": "12: 00 am – 11:00pm",
+        "hours": "11:00 am – 12:00 am",
         "phone": "(604) 558-2739",
-        "website": "http://parallel49brewing.com/"
+        "website": "http://parallel49brewing.com/",
+        "color": "#212125",
+        "highlight": "#f6f2cd",
+        "growlerprice": 10
     },
     {
         "name": "Bomber Brewing",
@@ -65,8 +81,12 @@
         "description": "It's a truly Canadian story – hockey, friendship and beer. From the ice rink to the brewery, Bomber Brewing began as a dream between three friends who share a passion for playing hockey and savouring good beer. They brew the beer they want to drink and abide by the creed: unite the everyman, the novice and the beer connoisseur with great beer!",
         "address": "1488 Adanac Street\n Vancouver, BC",
         "beernumber": 14,
+        "hours": "11:00 am – 12:00 am",
         "phone": "(604) 428-7457",
-        "website": "bomberbrewing.com"
+        "website": "bomberbrewing.com",
+        "color": "#f13820",
+        "highlight": "#2cc3f8",
+        "growlerprice": 10
     },
     {
         "name": "Brassneck Brewery",
@@ -75,32 +95,57 @@
         "longitude": -123.100674,
         "description": "Clustered with several breweries on Main Street in the Mount Pleasant neighbourhood (an area also known, appropriately, as Brewery Creek), Brassneck has a good-sized tasting lounge, often packed with area hipsters sampling an extensive selection of fine quality beers.",
         "address": "2148 Main Street\u0003, Vancouver BC, Canada",
+        "hours": "11:00 am – 12:00 am",
         "phone": "(604) 259-7686",
-        "website": "http://brassneck.ca/"
+        "website": "http://brassneck.ca/",
+        "color": "#212127",
+        "highlight": "#2cc3f9",
+        "growlerprice": 10
     },
     {
-        "name": "33 Acres",
+        "name": "33 Acres Brewing Company",
         "id": "33acres",
         "latitude": 49.263999,
-        "longitude": -123.105307
+        "longitude": -123.105307,
+        "description": "Our vision was born out of enjoyment for the binding elements of life. The spirit of community sharing; Drink, food, conversation, space, and ideas. We carry a strong appreciation for the boundless limits created by hard work. We’re influenced by the natural elements of our surroundings, fueled by creative thinking, and driven to make the highest quality product.\n\nOur space is located in Vancouver near a synthesis of forest and the Pacific. Itʼs here weʼve carved out a space to foster collectivity and fine craft beer. We hold that quality product exists in solidarity with working among friends, family, and community. This is an inclusive space; we value innovation in both our craft and design. Our common area was created to align these fundamentals with the simple aesthetics of our surrounding environment.",
+        "address": "15 West 8th Avenue\nVancouver, BC V5Y 1M8",
+        "neighbourhood": "Mount Pleasant",
+        "hours": "11:00 am – 12:00 am",
+        "phone": "604 620 4589",
+        "website": "http://33acresbrewing.com/",
+        "color": "#212128",
+        "highlight": "#2cc3f10",
+        "growlerprice": 10
     },
     {
         "name": "R&B Brewing",
         "id": "rb",
         "latitude": 49.267138,
-        "longitude": -123.103304
+        "longitude": -123.103304,
+        "hours": "11:00 am – 12:00 am",
+        "color": "#212129",
+        "highlight": "#2cc3f11",
+        "growlerprice": 10
     },
     {
         "name": "Granville Island Brewing",
         "id": "granvilleisland",
         "latitude": 49.270552,
-        "longitude": -123.135782
+        "longitude": -123.135782,
+        "hours": "11:00 am – 12:00 am",
+        "color": "#004478",
+        "highlight": "#459578",
+        "growlerprice": 10
     },
     {
         "name": "Dockside Brewing",
         "id": "dockside",
         "latitude": 49.26948,
-        "longitude": -123.131295
+        "longitude": -123.131295,
+        "hours": "11:00 am – 12:00 am",
+        "color": "#0d1e4e",
+        "highlight": "#ea3418",
+        "growlerprice": 10
     },
     {
         "name": "Yaletown Brewing",
@@ -110,7 +155,25 @@
         "description": "The Yaletown Brewing Company is Vancouver’s original and best Brewpub. Founded in 1994, just as the former warehouse district of Yaletown was just beginning to emerge as a destination for businesses and residents, the YBC was built with the vision of being a true neighbourhood pub – a welcoming gathering place whether you arrived dressed in a suit or flip-flops.",
         "address": "1111 Mainland St\n Vancouver, BC",
         "neighbourhood": "Down Town",
+        "hours": "11:00 am – 12:00 am",
         "phone": "(604) 681-2739",
-        "website": "http://www.mjg.ca/yaletown/"
+        "website": "http://www.mjg.ca/yaletown/",
+        "color": "#212132",
+        "highlight": "#2cc3f14",
+        "growlerprice": 10
+    },
+    {
+        "name": "Main Street Brewing",
+        "id": "mainstreet",
+        "latitude": 49.264678,
+        "longitude": -123.099204,
+        "description": "Main Street Brewing Co. resides in one of Vancouver’s few surviving industrial heritage buildings,\nthe “Vancouver Breweries Garage” (1913), in the historic Brewery Creek district.",
+        "address": "261 East Seventh Avenue,\nVancouver, BC ",
+        "neighbourhood": "Mount Pleasant",
+        "hours": "11:00 am – 12:00 am",
+        "phone": "(604) 336-7711",
+        "website": "http://mainstreetbeer.ca/",
+        "color": "#f22300",
+        "growlerprice": 10
     }
 ]

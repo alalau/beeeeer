@@ -6,6 +6,7 @@
  *
  */
 
+/*
 var styles = [
     {
         "featureType": "all",
@@ -208,6 +209,106 @@ var styles = [
 			}
 		]
 	}
+]
+
+*/
+
+var styles = [
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#425260"
+            },
+            {
+                "lightness":50
+             },
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+   {
+      "featureType":"road",
+      "elementType":"geometry",
+      "stylers":[
+         {
+            "lightness":100
+         },
+         {
+            "visibility":"simplified"
+         }
+      ]
+   },
+   {
+      "featureType":"water",
+      "elementType":"geometry",
+      "stylers":[
+         {
+            "visibility":"on"
+         },
+         {
+            "color":"#4a6a82"
+         }
+      ]
+   },
+   {
+      "featureType":"poi",
+      "elementType":"geometry.fill",
+      "stylers":[
+         {
+            "color":"#3a5151"
+         }
+      ]
+   },
+   {
+      "featureType":"road",
+      "elementType":"geometry.fill",
+      "stylers":[
+         {
+            "color":"#35424c"
+         }
+      ]
+   },
+   {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#3b4954"
+            },
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#35424c"
+            },
+        ]
+    },
+    { 
+                "featureType": "road", 
+                "elementType": "labels", 
+                "stylers": [ { "visibility": "off" } ] 
+            },
 ]
 
 

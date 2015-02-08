@@ -18,4 +18,22 @@ angular.module('beerApp')
     });
     $scope.pageClass = 'page-details';
 
+    $scope.$back = function() { 
+      window.history.back();
+    };
+
 }]);
+
+
+angular.module('beerApp').directive('a', function() {
+    return {
+        restrict: 'E',
+        link: function(scope, elem, attrs) {
+            if(attrs.href === '#tab1'|| attrs.href === '#tab2' || attrs.href === '#tab3' ){
+                elem.on('click', function(e){
+                    e.preventDefault();
+                });
+            }
+        }
+   };
+}); 

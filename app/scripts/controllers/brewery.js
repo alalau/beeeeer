@@ -22,4 +22,12 @@ angular.module('beerApp')
     });
     $scope.pageClass = 'page-details';
 
+    $scope.thisBrewery = function(beer) {
+        return beer.brewery === $scope.brewery.name;
+    };
+
+    $scope.$back = function() { 
+      window.history.back();
+    };
+
 }]);
