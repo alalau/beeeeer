@@ -264,7 +264,7 @@ var styles = [
             "visibility":"on"
          },
          {
-            "color":"#4a6a82"
+            "color":"#394751"
          }
       ]
    },
@@ -273,7 +273,10 @@ var styles = [
       "elementType":"geometry.fill",
       "stylers":[
          {
-            "color":"#3a5151"
+            "color":"#425260"
+         },
+         {
+            "lightness":5
          }
       ]
    },
@@ -282,7 +285,7 @@ var styles = [
       "elementType":"geometry.fill",
       "stylers":[
          {
-            "color":"#35424c"
+            "color":"#425260"
          }
       ]
    },
@@ -291,8 +294,11 @@ var styles = [
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#3b4954"
+                "color": "#425260"
             },
+            {
+                "lightness":5
+             }
         ]
     },
     {
@@ -300,7 +306,7 @@ var styles = [
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#35424c"
+                "color": "#425260"
             },
         ]
     },
