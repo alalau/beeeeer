@@ -662,7 +662,7 @@ header.detail-view {
 	width: 100%;
 	display: inline-block;
 	margin-top: 20px;
-	margin-bottom: 14px;
+	margin-bottom: 10px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -684,7 +684,7 @@ header.detail-view {
 	background: black;
 	top: 0;
 	position: fixed;
-	z-index: -1;
+	z-index: 1;
 	background: -moz-linear-gradient(top, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.35)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top, rgba(0,0,0,0.35) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
