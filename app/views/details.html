@@ -1,24 +1,22 @@
 <script src="scripts/logic.js"></script>
 <script src="scripts/menu.js"></script>
 
-<header>
-		<a ng-click="$back()">
-			<svg id="arrow-icon" class="nav_icon stay" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-				 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-				<g id="ic_x5F_search_x0D_"></g>
-				<polygon fill="#000000" points="12,20 13.4,18.6 7.8,13 20,13 20,11 7.8,11 13.4,5.4 12,4 4,12 "/>
-			</svg>
-		</a>
-		<div class="detail-title-2">
-			<span>{{beer.name}}</span>
-		</div>
-	</header>
+<header class="detail-view">
+	<a ng-click="$back()">
+		<svg id="arrow-icon" class="nav_icon stay" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+			<g id="ic_x5F_search_x0D_"></g>
+			<polygon fill="#000000" points="12,20 13.4,18.6 7.8,13 20,13 20,11 7.8,11 13.4,5.4 12,4 4,12 "/>
+		</svg>
+	</a>
+	<img src="images/beers/{{beer.icon}}.svg" class="detail-img-2">
+	<div class="detail-title-2">
+		<span>{{beer.name}}</span>
+	</div>
+</header>
 
-<div class="pushBelowHeader">
+<div id="detailContent">
 	<div class="container">
-		<br>
-
-		<img src="images/beer_icon.svg" class="big-icon">
 		<br>
 		<h2>About</h2>
 		<p>{{beer.description}}</p>

@@ -38,7 +38,7 @@
 		<div class="card2" ng-repeat="beer in beers | filter:query | orderBy:orderProp">
 			<a href="#/beers/{{beer.id}}">
 				<div class="beerListInfo col-xs-12">
-					<img src="images/beer_icon.svg" class="beer-icon">
+					<img src="images/beers/{{beer.icon}}.svg" class="beer-icon">
 					<div class="beerTitle">
 						<h3>{{beer.name}}</h3>
 						<p>{{beer.brewery}}</p>
