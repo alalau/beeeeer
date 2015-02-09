@@ -12,14 +12,11 @@ var styles = [
         "elementType": "labels.text.fill",
         "stylers": [
             {
-                "saturation": 26
-            },
-            {
                 "color": "#425260"
             },
             {
-                "lightness": 0
-            }
+                "lightness":50
+             },
         ]
     },
     {
@@ -27,14 +24,8 @@ var styles = [
         "elementType": "labels.text.stroke",
         "stylers": [
             {
-                "visibility": "on"
+                "visibility": "off"
             },
-            {
-                "color": "#425260"
-            },
-            {
-                "lightness": 6
-            }
         ]
     },
     {
@@ -46,34 +37,52 @@ var styles = [
             }
         ]
     },
-    {
-        "featureType": "administrative",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#425260"
-            },
-            {
-                "lightness": 10
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#425260"
-            },
-            {
-                "lightness": 7
-            },
-            {
-                "weight": 1.2
-            }
-        ]
-    },
-    {
+   {
+      "featureType":"road",
+      "elementType":"geometry",
+      "stylers":[
+         {
+            "lightness":100
+         },
+         {
+            "visibility":"simplified"
+         }
+      ]
+   },
+   {
+      "featureType":"water",
+      "elementType":"geometry",
+      "stylers":[
+         {
+            "visibility":"on"
+         },
+         {
+            "color":"#394751"
+         }
+      ]
+   },
+   {
+      "featureType":"poi",
+      "elementType":"geometry.fill",
+      "stylers":[
+         {
+            "color":"#425260"
+         },
+         {
+            "lightness":5
+         }
+      ]
+   },
+   {
+      "featureType":"road",
+      "elementType":"geometry.fill",
+      "stylers":[
+         {
+            "color":"#425260"
+         }
+      ]
+   },
+   {
         "featureType": "landscape",
         "elementType": "geometry",
         "stylers": [
@@ -81,71 +90,8 @@ var styles = [
                 "color": "#425260"
             },
             {
-                "lightness": 10
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#425260"
-            },
-            {
-                "lightness": 11
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#425260"
-            },
-            {
-                "lightness": 7
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#425260"
-            },
-            {
-                "lightness": 19
-            },
-            {
-                "weight": 0.2
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#425260"
-            },
-            {
-                "lightness": 8
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#425260"
-            },
-            {
-                "lightness": 6
-            }
+                "lightness":5
+             }
         ]
     },
     {
@@ -155,59 +101,13 @@ var styles = [
             {
                 "color": "#425260"
             },
-            {
-                "lightness": 9
-            }
         ]
     },
-    {
-        "featureType": "water",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#3d4f5b"
+    { 
+                "featureType": "road", 
+                "elementType": "labels", 
+                "stylers": [ { "visibility": "off" } ] 
             },
-            {
-                "lightness": 0
-            }
-        ]
-    },
-    {
-		"featureType": "administrative",
-		"elementType": "labels",
-		"stylers": [
-			{ 
-				"visibility": "off" 
-			}
-		]
-	},
-	{
-		"featureType": "poi",
-		"elementType": "labels",
-		"stylers": [
-			{ 
-				"visibility": "off" 
-			}
-		]
-	},
-	{
-		"featureType": "water",
-		"elementType": "labels",
-		"stylers": [
-			{ 
-				"visibility": "off" 
-			}
-		]
-	},
-	{
-		"featureType": "road",
-		"elementType": "labels",
-		"stylers": [
-			{ 
-				"visibility": "off" 
-			}
-		]
-	}
 ]
 
 
@@ -249,6 +149,10 @@ angular.module('beerApp')
 
             angular.forEach(data, function(item) { 
 
+                var iconimg = {
+                    url: '../images/markers/'+item.id+'.svg', // url
+                };
+
                 var address = "#/breweries/" + item.id;
                 var marker = {
                   id: idNum,
@@ -256,7 +160,7 @@ angular.module('beerApp')
                     latitude: item.latitude,
                     longitude: item.longitude
                   },
-                  icon: '../images/marker.png',
+                  icon: iconimg,
                   events: {
                     click: function () {
                         window.location.href = address;
@@ -297,4 +201,21 @@ angular.module('beerApp')
         };
 
 }]);
+
+//SPLASH STUFF TO BE MOVED
+function splash(e) {
+    $('#splash h1').delay(600).fadeToggle(1200);
+    $('#splash').delay(7200).fadeToggle(1600);
+    e.stopPropagation();
+}
+
+function updateSplashSize() {
+    $("#splash").css('height', $(window).height());
+    $("#splash").css('width', $(window).width());
+    $("#splash").css('padding-top', $(window).height()/2-80);
+}
+
+$(document).ready(updateSplashSize);
+$(document).ready(splash);
+$(window).resize(updateSplashSize);
   

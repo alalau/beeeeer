@@ -25,8 +25,6 @@ $('#dim').click(function() {
 	closeMenu();
 });
 
-// $( "#brand-name" ).delay(3600).fadeOut( 1600 ); used to remove brand name after load.
-
 $(function() {
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  		Hammer(pad).on("swipeleft", function() {

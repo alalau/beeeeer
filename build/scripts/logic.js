@@ -42,19 +42,17 @@
 
         if ($('#detailContent').length){
 	        contentTop = $("#detailContent").offset().top - scrollTop;
-	    	if (contentTop < 105) {
+
+	    	if (contentTop <= 110) {
 	    		$('header').removeClass('detail-view');
 	    	} else {
 	    		$('header').addClass('detail-view');
 	    	}
-			
-			var newOpacity = 1 - $(window).scrollTop() / 250;
-	        $(".detail-img").css({
-	            opacity: newOpacity
-	        });   
-	        $(".detail-img").css({
-	            opacity: newOpacity
-	        });   		
+
+	    	$(".detail-hero").css({
+	            marginTop: ($(window).scrollTop() / 3)
+	        });
+
 	    }
    });
 
@@ -90,17 +88,18 @@
 		if (w < 720) {
 	    	$('#search-input').focus();
 			$('#search').toggleClass("active");
+			$('#search-input').val("");
 		}
 		$('html, body').animate({
         	scrollTop: $('#brewerResults').offset().top - 120
     	}, 500);
 	});
 
-
 	$( "#search-input" ).keydown(function() {
-		if ( $("#search-input").val() != '' ) {
+		if ( $("#search-input").val() !== '' ) {
 		    $('#vancouverMap').addClass('removeMap');
 		} else {
 			$('#vancouverMap').removeClass('removeMap');
 		}
 	});
+

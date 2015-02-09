@@ -29,10 +29,24 @@ h1, h2 {
 	padding: 0;
 }
 
+h2 {
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 800;
+	margin: 20px 0 10px 0;
+	opacity: 0.5;
+	letter-spacing: 0.05em;
+}
+
 
 a, a:hover {
 	text-decoration: none;
 	color: black;
+}
+
+span.unit {
+	font-size: 22px;
+	font-weight: 400;
 }
 
 ul {
@@ -70,30 +84,48 @@ header {
 	-o-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.07);
 	background: #ffffff;
 	z-index: 1000;
+	overflow: hidden !important;
+}
+
+header a {
+	cursor: pointer;
 }
 
 /* --------------------------
  * brand name element styles
  * left in for later i'm lazy
- * -------------------------- /
+ * -------------------------- */
 
-/*#brand-name {
-	font-family: "Montserrat";
-	font-size: 36px;
-	font-weight: 700;
-	position: absolute;
-	bottom: 24px;
-	right: 24px;
-	color:#f37a4d;
-	z-index: 10;
-	text-transform: uppercase;
-	text-shadow: .25px .25px 2px #3d4e5b;
+#splash {
+	z-index: 55;
+	position: fixed;
+	background: #fff;
 }
 
-#brand-name span {
-	text-shadow: .25px .25px 2px #fff;
+#splash h1 {
+	text-align: center;
+	font-family: "Montserrat";
+	font-size: 8em;
+	font-weight: 700;
+	color:#f37a4d;
+	display: none;
+	text-transform: uppercase;
+	text-shadow: 5px 5px 2px #3d4e5b;
+}
+
+#splash h1 span {
+	text-shadow: 5px 5px 2px #f37a4d;
 	color:#3d4e5b;	
-}*/
+}
+
+#splash img {
+	height: 50px;
+	width: 50px;
+	display: block;
+	left: -12.5px;
+	position: relative;
+	margin: 0 auto;
+}
 
 .logo {
 	height: 64px;
@@ -118,13 +150,14 @@ select {
 }
 
 p {
-	font-size: 16px;
+	font-size: 15px;
+	color: black;
 }
 
 span.line {
 	width: 100%;
 	height: 1px;
-	background: rgba(0,0,0,0.2);
+	background: rgba(0,0,0,0.1);
 	display: block;
 	margin: 30px 0;
 }
@@ -211,7 +244,7 @@ header .searchbox {
 .navTitleMobile {
 	position: absolute;
 	top: 0;
-	left: 80px;
+	left: 72px;
 	font-size: 18px;
 	margin: 20px 0;
 }
@@ -268,11 +301,27 @@ header .searchbox {
 	-webkit-user-drag: none;
 	opacity: 1;
 	float: left;
+	z-index: 10;
+}
+
+.nav_icon.stay {
+	z-index: 99;
+	position: fixed;
 }
 
 .filterBtn span {
 	padding-left: 0;
 	padding-right: 30px;
+}
+
+polygon {
+	-moz-transition: 	all .28s;
+	-webkit-transition: all .28s;
+	transition: 		all .28s;
+}
+
+header.detail-view polygon {
+	fill: white;
 }
 
  /* =========================================================
@@ -307,6 +356,12 @@ header .searchbox {
 
 .container {
 	max-width: 850px;
+}
+
+.container2 {
+	margin: 0 auto;
+	max-width: 850px;
+	padding: 0;
 }
 
 #brewerResults .row {
@@ -346,39 +401,52 @@ header .searchbox {
 }
 
 h3 {
-	font-size: 22px;
-	font-family: 'Montserrat', sans-serif;
-	text-shadow: 0px 3px rgba(0,0,0,0.1);
-	text-transform: uppercase;
-	font-size: 18px;
+	font-size: 16px;
+	font-weight: 600;
 }
 
 .beerTitle p {
 	opacity: 0.5;
 }
 
+.beerTitle {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: calc(100% - 70px);
+}
+
 .beer-icon {
 	float: left;
 	padding: 17px;
-	padding-bottom: 5px;
-	padding-right: 27px;
+	padding-bottom: 0;
+	padding-right: 17px;
+	height: 70px;
+	padding-left: 0;
 }
 
-#detailContent .beer-icon {
-	float: none;
-	display: inline-block;
-	width: 100px;
-}
-
-#detailContent p {
-	display: inline-block;
-}
-
-#detailContent h1 {
-	margin: 30px 0;
-	font-size: 90px;
+h1 {
+	font-size: 45px;
 	font-weight: 300;
-	opacity: 0.6;
+	margin: 0;
+	color: black;
+}
+
+.detail-hero {
+	width: 100%;
+	height: 100%;
+	height: 270px;
+	z-index: -1;
+}
+
+.detail-hero.taller{
+	height: 320px;
+}
+
+.half {
+	width: 50%;
+	display: inline-block;
+	float: left;
 }
 
  /* =========================================================
@@ -396,7 +464,7 @@ h3 {
 }
 
 #fab {
-	z-index: 900;
+	z-index: 50;
 }
 
 .fab-btn:before, .fab-btn:after {
@@ -477,6 +545,38 @@ h3 {
 	display: none;
 }
 
+.big-icon {
+
+}
+
+ /* =========================================================
+ * Drop Down Select List
+ * ========================================================= */
+
+.styled-select {
+	width: 50%;
+	height: 50px;
+	line-height: 50px;
+	overflow: hidden;
+	background: url(../images/icons/down_arrow.png) no-repeat right #ddd;
+	border: 1px solid #ccc;
+	padding: 0 5px;
+	margin-top: 21px;
+}
+
+.styled-select select {
+	background: transparent;
+	width: 100%;
+	height: 34px;
+	padding: 5px;
+	font-size: 18px;
+	line-height: 24px;
+	margin: 0;
+	border: 0;
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
  /* =========================================================
  * filter panel
  * ========================================================= */
@@ -509,12 +609,16 @@ h3 {
  * filter panel
  * ========================================================= */
 
+header.tabbed {
+	height: 110px;
+}
 
 header.detail-view {
-	box-shadow: none;
 	position: absolute;
-	height: 350px;
+	height: 380px;
 	overflow: hidden;
+	color: white;
+	background: #43B7DB;
 }
 
 .detail-view .nav_icon {
@@ -524,6 +628,8 @@ header.detail-view {
 .detail-view .navTitleMobile {
 	bottom: 10px;
 	top: initial;
+	z-index: 20;
+	font-family: "Montserrat";
 }
 
 #detailContent {
@@ -531,21 +637,60 @@ header.detail-view {
 	margin-top: 380px;
 	width: 100%;
 	margin-bottom: 100px;
+	background: #ececec;
+}
+
+.detail-title, .detail-title-2 {
+	background: white;
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	height: 110px;
+	z-index: 20;
+}
+
+.detail-title-2 {
+	height: 64px;
+}
+
+.detail-title span, .detail-title-2 span {
+	color: #3e4e5b;
+	font-size: 18px;
+	width: 100%;
+	display: inline-block;
+	margin-top: 20px;
+	margin-bottom: 14px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.detail-title span, .detail-title-2 span {
+	text-align: left;
+	margin-left: 72px;
+}
+
+.detail-view .detail-title span, .detail-view .detail-title-2 span {
+	text-align: center;
+	margin-left: 0px;
 }
 
 .detail-view .shadow {
 	width: 100%;
-	height: 80px;
+	height: 60px;
 	background: black;
-	bottom: 0;
-	position: absolute;
+	top: 0;
+	position: fixed;
 	z-index: -1;
-	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.35))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.35) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.35) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.35) 100%); /* IE10+ */
-	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.35) 100%); /* W3C */
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.35)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.35) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(0,0,0,0.35) 0%,rgba(0,0,0,0.5) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(0,0,0,0.35) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%,rgba(0,0,0,0) 100%); /* W3C */
 }
 
 img.headerImage {
@@ -562,7 +707,7 @@ img.headerImage {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	z-index: -2;
+	z-index: -10;
 }
 
 .placeholderImg {
@@ -625,8 +770,9 @@ p.temporary-text {
 	padding: 0;
 	width: 100%;
 	text-align: left;
-	padding-bottom: 8px;
-	margin-bottom: 0;
+	margin: 0;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
 }
 
 .brewery-logo {
@@ -636,9 +782,104 @@ p.temporary-text {
 .detail-img {
 	margin: 0 auto;
 	display: inherit;
-	height: 250px;
+	height: 150px;
+	margin-top: 60px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -75px;
+}
+
+.detail-img-2 {
+	margin: 0 auto;
+	display: inherit;
+	height: 180px;
+	margin-top: 70px;
+}
+
+#detail-overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background: #425260;
+	opacity: 0;
+}
+
+.nav-tabs {
+	background: none;
+	border: 0;
+}
+
+.nav-tabs > li > a, .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	background: none !important;
+	border: 0;
+}
+.twotabs li {
+	width: 50%;
+}
+
+.nav-tabs {
+	background: none;
+	border: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.nav-tabs > li {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+	.nav-tabs > li > a {
+		color: #3e4e5b !important;
+		opacity: 0.6;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 600;
+		padding: 14px;
+	}
+
+.nav-tabs li.active {
+	border-bottom: 2px solid #2cc3f3;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+	.nav-tabs > li.active > a {
+		opacity: 1;
+	}
+
+.tab-content {
 	margin-top: 40px;
 }
+
+.after-icon {
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+.after-icon p {
+	font-size: 13px;
+}
+
+.info-icon {
+	float: left;
+	margin-left: 8px;
+	margin-right: 30px;
+	opacity: 0.5;
+}
+
+.big-icon {
+	width: 75px;
+	margin: 0 auto;
+	display: inherit;
+	margin-top: 20px;
+}
+
 
 /* ANIMATIONS
 ============================================================================= */
