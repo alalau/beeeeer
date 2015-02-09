@@ -50,7 +50,7 @@
 	    	}
 
 	    	$(".detail-hero").css({
-	            marginTop: -($(window).scrollTop() / 3)
+	            marginTop: ($(window).scrollTop() / 3)
 	        });
 
 	    }
