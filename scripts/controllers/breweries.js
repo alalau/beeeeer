@@ -150,7 +150,7 @@ angular.module('beerApp')
             angular.forEach(data, function(item) { 
 
                 var iconimg = {
-                    url: '../images/markers/'+item.id+'.svg', // url
+                    url: 'http://www.sfu.ca/~arlalau/hopshound/'+item.id+'.svg', // url
                 };
 
                 var address = "#/breweries/" + item.id;
