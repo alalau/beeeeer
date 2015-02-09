@@ -118,6 +118,12 @@ and (max-width : 720px) {
 		display: none;
 	}
 
+	#splash {
+		z-index: -5;
+		display: none;
+		visibility: hidden;
+	}
+
 }
 
 
