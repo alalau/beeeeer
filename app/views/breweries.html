@@ -38,13 +38,13 @@
 
 	<section id="brewerResults" class="pushBelowHeader">
 		<div class="container">
-			<p>Order: 
+			<div class="styled-select">
 				<select ng-model="orderProp">
 					<option value="name">Alphabetical</option>
 					<option value="">Most Beers</option>
 					<option value="">Least Beers</option>
 				</select>
-			</p>
+			</div>
 			<span class="line"></span>
 			<div class="card .col-xs-6 .col-md-4" ng-repeat="brewery in breweries | filter:query | orderBy:orderProp">
 				<a href="#/breweries/{{brewery.id}}">

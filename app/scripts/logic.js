@@ -88,12 +88,12 @@
 		if (w < 720) {
 	    	$('#search-input').focus();
 			$('#search').toggleClass("active");
+			$('#search-input').val("");
 		}
 		$('html, body').animate({
         	scrollTop: $('#brewerResults').offset().top - 120
     	}, 500);
 	});
-
 
 	$( "#search-input" ).keydown(function() {
 		if ( $("#search-input").val() !== '' ) {
@@ -102,3 +102,4 @@
 			$('#vancouverMap').removeClass('removeMap');
 		}
 	});
+
