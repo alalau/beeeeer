@@ -400,16 +400,16 @@ h3 {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	max-width: calc(100% - 65px);
+	max-width: calc(100% - 70px);
 }
 
 .beer-icon {
 	float: left;
 	padding: 17px;
 	padding-bottom: 0;
-	padding-right: 20px;
+	padding-right: 17px;
 	height: 70px;
-	padding-left: 10px;
+	padding-left: 0;
 }
 
 h1 {
@@ -578,7 +578,7 @@ header.detail-view {
 	height: 380px;
 	overflow: hidden;
 	color: white;
-	background: rgb(129, 129, 129);
+	background: #43B7DB;
 }
 
 .detail-view .nav_icon {
@@ -731,6 +731,13 @@ p.temporary-text {
 	display: inherit;
 	height: 150px;
 	margin-top: 60px;
+}
+
+.detail-img-2 {
+	margin: 0 auto;
+	display: inherit;
+	height: 180px;
+	margin-top: 70px;
 }
 
 #detail-overlay {
